@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CleanCodeGroup2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrawlerRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HeaderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heading.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created base project">
+      <change afterPath="$PROJECT_DIR$/src/main/HTMLFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MotherFuckingWebsiteHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanCodeGroup2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CleanCodeGroup2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrawlerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CrawlerRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HeaderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HeaderType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Heading.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,17 +32,54 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2fBNtmryYrS9fANW7v9FJ3RhJx8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2/src/main"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\manue\OneDrive\Desktop\Bachelor_Informatik\24S\Clean Code\Project\CleanCodeGroup2\src\main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HTMLFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HTMLFetcherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HTMLFetcherTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +89,14 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created base project">
+      <created>1713272276928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713272276928</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -64,5 +109,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created base project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created base project" />
   </component>
 </project>
