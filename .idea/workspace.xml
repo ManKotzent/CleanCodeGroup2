@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/TestHTMLs/TestHTML.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL">
+      <change afterPath="$PROJECT_DIR$/src/main/CrawlerRecordFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HTMLExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HTMLFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLFetcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MotherFuckingWebsiteHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MfWebsiteHTML.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +62,12 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HTMLExtractorTest">
+  <component name="RunManager" selected="JUnit.HTMLFetcherTest$fetchHtmlFromUrlTests.exceptionTest">
     <configuration name="HTMLExtractorTest$getHeadingsTest.complexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
       <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$getHeadingsTest" />
       <option name="METHOD_NAME" value="complexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HTMLExtractorTest$getHeadingsTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
-      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$getHeadingsTest" />
-      <option name="METHOD_NAME" value="simpleTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,6 +92,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HTMLFetcherTest$fetchHtmlFromUrlTests.exceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="HTMLFetcherTest" />
+      <option name="MAIN_CLASS_NAME" value="HTMLFetcherTest$fetchHtmlFromUrlTests" />
+      <option name="METHOD_NAME" value="exceptionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HTMLFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="" />
@@ -115,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HTMLFetcherTest$fetchHtmlFromUrlTests.exceptionTest" />
         <item itemvalue="JUnit.HTMLExtractorTest" />
         <item itemvalue="JUnit.HTMLExtractorTest$removeCommentsTest.simpleTest" />
         <item itemvalue="JUnit.HTMLExtractorTest$getHeadingsTest.complexTest" />
         <item itemvalue="JUnit.HTMLFetcherTest" />
-        <item itemvalue="JUnit.HTMLExtractorTest$getHeadingsTest.simpleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713712045365</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added HTMLExtrator.getHtmlWithNoComments&#10;Added tests to HTMLFetcherTest">
+      <created>1713796340192</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713796340192</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +176,8 @@
     <MESSAGE value="Created base project" />
     <MESSAGE value="Created HTMLFetcher and HTMLFetcherTest&#10;Reformatted project to accommodate Tests" />
     <MESSAGE value="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests" />
+    <MESSAGE value="Added HTMLExtrator.getHtmlWithNoComments&#10;Added tests to HTMLFetcherTest" />
+    <MESSAGE value="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL" />
   </component>
 </project>
