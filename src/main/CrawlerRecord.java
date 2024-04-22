@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.StringJoiner;
 
 public class CrawlerRecord {
     private String URL;
@@ -50,5 +51,29 @@ public class CrawlerRecord {
 
     public void setBroken(boolean broken) {
         isBroken = broken;
+    }
+
+    //For testing purposes
+    public String toString() {
+        StringJoiner joiner = new StringJoiner(", ", "CrawlerRecord{", "}");
+        joiner.add("URL='" + URL + "'");
+
+        // Convert headings to string
+        if (headings != null) {
+            joiner.add("headings=" + headings);
+        } else {
+            joiner.add("headings=null");
+        }
+
+        // Convert subSites to string
+        if (subSites != null) {
+            joiner.add("subSites=" + subSites);
+        } else {
+            joiner.add("subSites=null");
+        }
+
+        joiner.add("isBroken=" + isBroken);
+
+        return joiner.toString();
     }
 }

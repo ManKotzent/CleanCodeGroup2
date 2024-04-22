@@ -22,4 +22,11 @@ public class Heading {
     public void setHeaderType(HeaderType headerType) {
         this.headerType = headerType;
     }
+
+    public String toString() {
+        return "Heading{" +
+                "heading='" + heading + '\'' +
+                ", headerType=" + headerType +
+                '}';
+    }
 }

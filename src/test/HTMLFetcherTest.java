@@ -1,4 +1,4 @@
-import TestHTMLs.MfWebsiteHTML;
+import TestHTMLs.MfWebsiteTestResources;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -16,8 +16,8 @@ class HTMLFetcherTest {
         @Test
         @DisplayName("Simple Test")
         void simpleTest() throws IOException {
-            String html = HTMLFetcher.fetchHtmlFromUrl(MfWebsiteHTML.url);
-            assertEquals(MfWebsiteHTML.html, html);
+            String html = HTMLFetcher.fetchHtmlFromUrl(MfWebsiteTestResources.url);
+            assertEquals(MfWebsiteTestResources.html, html);
         }
 
          @Test

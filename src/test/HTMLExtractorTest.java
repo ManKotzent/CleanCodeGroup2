@@ -1,5 +1,5 @@
-import TestHTMLs.MfWebsiteHTML;
-import TestHTMLs.TestHTML;
+import TestHTMLs.MfWebsiteTestResources;
+import TestHTMLs.MyHTMLTestResources;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class HTMLExtractorTest {
         @DisplayName("Complex Test")
         @Test
         void complexTest() {
-            String html = MfWebsiteHTML.html;
+            String html = MfWebsiteTestResources.html;
             HTMLExtractor htmlExtractor = new HTMLExtractor(html);
 
             List<String> urls = htmlExtractor.getUrls();
@@ -69,7 +69,7 @@ public class HTMLExtractorTest {
         @DisplayName("Complex Test")
         @Test
         void complexTest() {
-            HTMLExtractor htmlExtractor = new HTMLExtractor(MfWebsiteHTML.html);
+            HTMLExtractor htmlExtractor = new HTMLExtractor(MfWebsiteTestResources.html);
 
             List<Heading> headings = htmlExtractor.getHeadings();
 
@@ -101,9 +101,9 @@ public class HTMLExtractorTest {
         @DisplayName("Simple Test")
         @Test
         void simpleTest() {
-            HTMLExtractor htmlExtractor = new HTMLExtractor(TestHTML.html);
+            HTMLExtractor htmlExtractor = new HTMLExtractor(MyHTMLTestResources.html);
 
-            assertEquals(TestHTML.htmlNoComments, htmlExtractor.getHtmlWithNoComments());
+            assertEquals(MyHTMLTestResources.htmlNoComments, htmlExtractor.getHtmlWithNoComments());
         }
     }
 }
