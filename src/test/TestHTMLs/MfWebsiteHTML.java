@@ -1,4 +1,6 @@
-public class MotherFuckingWebsiteHTML {
+package TestHTMLs;
+
+public class MfWebsiteHTML {
     public static final String url = "https://motherfuckingwebsite.com/";
     public static final String html = "<!DOCTYPE html>\n" +
             "<html>\n" +

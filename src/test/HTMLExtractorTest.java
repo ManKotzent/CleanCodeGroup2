@@ -1,4 +1,5 @@
-import org.junit.jupiter.api.Assertions;
+import TestHTMLs.MfWebsiteHTML;
+import TestHTMLs.TestHTML;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -30,7 +31,7 @@ public class HTMLExtractorTest {
         @DisplayName("Complex Test")
         @Test
         void complexTest() {
-            String html = MotherFuckingWebsiteHTML.html;
+            String html = MfWebsiteHTML.html;
             HTMLExtractor htmlExtractor = new HTMLExtractor(html);
 
             List<String> urls = htmlExtractor.getUrls();
@@ -68,9 +69,41 @@ public class HTMLExtractorTest {
         @DisplayName("Complex Test")
         @Test
         void complexTest() {
-            HTMLExtractor htmlExtractor = new HTMLExtractor(MotherFuckingWebsiteHTML.html);
+            HTMLExtractor htmlExtractor = new HTMLExtractor(MfWebsiteHTML.html);
 
             List<Heading> headings = htmlExtractor.getHeadings();
+
+            assertEquals(8, headings.size());
+
+            assertEquals("This is a motherfucking website.", headings.get(0).getHeading());
+            assertEquals("Seriously, what the fuck else do you want?", headings.get(1).getHeading());
+            assertEquals("Well guess what, motherfucker:", headings.get(2).getHeading());
+            assertEquals("It's fucking lightweight", headings.get(3).getHeading());
+            assertEquals("It's responsive", headings.get(4).getHeading());
+            assertEquals("It fucking works", headings.get(5).getHeading());
+            assertEquals("This is a website. Look at it.  You've never seen one before.", headings.get(6).getHeading());
+            assertEquals("Yes, this is fucking satire, you fuck", headings.get(7).getHeading());
+
+            assertEquals(HeaderType.H1, headings.get(0).getHeaderType());
+            assertEquals(HeaderType.H2, headings.get(1).getHeaderType());
+            assertEquals(HeaderType.H3, headings.get(2).getHeaderType());
+            assertEquals(HeaderType.H2, headings.get(3).getHeaderType());
+            assertEquals(HeaderType.H2, headings.get(4).getHeaderType());
+            assertEquals(HeaderType.H2, headings.get(5).getHeaderType());
+            assertEquals(HeaderType.H2, headings.get(6).getHeaderType());
+            assertEquals(HeaderType.H3, headings.get(7).getHeaderType());
+        }
+    }
+
+    @Nested
+    @DisplayName("removeComments Test")
+    class removeCommentsTest {
+        @DisplayName("Simple Test")
+        @Test
+        void simpleTest() {
+            HTMLExtractor htmlExtractor = new HTMLExtractor(TestHTML.html);
+
+            assertEquals(TestHTML.htmlNoComments, htmlExtractor.getHtmlWithNoComments());
         }
     }
 }

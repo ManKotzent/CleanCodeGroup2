@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created HTMLFetcher and HTMLFetcherTest&#10;Reformatted project to accommodate Tests">
-      <change afterPath="$PROJECT_DIR$/src/main/HTMLExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestHTMLs/TestHTML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HeaderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HeaderType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HTMLExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MotherFuckingWebsiteHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MotherFuckingWebsiteHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MotherFuckingWebsiteHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MfWebsiteHTML.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +46,11 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2/src/main"
+    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,7 +64,17 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HTMLFetcherTest">
+  <component name="RunManager" selected="JUnit.HTMLExtractorTest">
+    <configuration name="HTMLExtractorTest$getHeadingsTest.complexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
+      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$getHeadingsTest" />
+      <option name="METHOD_NAME" value="complexTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HTMLExtractorTest$getHeadingsTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
@@ -73,20 +85,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HTMLExtractorTest$getUrlsTest.complexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HTMLExtractorTest$removeCommentsTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
-      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$getUrlsTest" />
-      <option name="METHOD_NAME" value="complexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HTMLExtractorTest$getUrlsTest.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="HTMLExtractorTest" />
-      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$getUrlsTest" />
+      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest$removeCommentsTest" />
       <option name="METHOD_NAME" value="simpleTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -113,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HTMLExtractorTest" />
+        <item itemvalue="JUnit.HTMLExtractorTest$removeCommentsTest.simpleTest" />
+        <item itemvalue="JUnit.HTMLExtractorTest$getHeadingsTest.complexTest" />
         <item itemvalue="JUnit.HTMLFetcherTest" />
         <item itemvalue="JUnit.HTMLExtractorTest$getHeadingsTest.simpleTest" />
-        <item itemvalue="JUnit.HTMLExtractorTest" />
-        <item itemvalue="JUnit.HTMLExtractorTest$getUrlsTest.complexTest" />
-        <item itemvalue="JUnit.HTMLExtractorTest$getUrlsTest.simpleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713706957679</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests">
+      <created>1713712045365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713712045365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +170,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created base project" />
     <MESSAGE value="Created HTMLFetcher and HTMLFetcherTest&#10;Reformatted project to accommodate Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created HTMLFetcher and HTMLFetcherTest&#10;Reformatted project to accommodate Tests" />
+    <MESSAGE value="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests" />
   </component>
 </project>

@@ -33,6 +33,14 @@ public class HTMLExtractor {
         return urls;
     }
 
+    //Potential function for removing comments to avoid getUrls reading out URLs in comments
+    public String getHtmlWithNoComments() {
+        // Regular expression to match HTML comments
+        String regex = "<!--(.*?)-->";
+        // Replace comments with an empty string
+        return this.html.replaceAll(regex, "");
+    }
+
     public List<Heading> getHeadings() {
         List<Heading> headings = new LinkedList<>();
 
