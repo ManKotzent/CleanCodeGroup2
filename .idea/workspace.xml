@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL">
-      <change afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MySite.html" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CrawlerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CrawlerRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Heading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLExtractorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HTMLFetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/MfWebsiteHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MfWebsiteTestResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/TestHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MyHTMLTestResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/MyHTMLTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MyHTMLTestResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/MySite.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,22 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\manue\OneDrive\Desktop\Bachelor_Informatik\24S\Clean Code\Project\CleanCodeGroup2\src\main" />
@@ -98,11 +93,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.exceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
       <option name="MAIN_CLASS_NAME" value="CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-      <option name="METHOD_NAME" value="exceptionTest" />
+      <option name="METHOD_NAME" value="complexTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,10 +115,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CrawlerRecordFactoryTest" />
+        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest2" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.exceptionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713799373138</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes">
+      <created>1713802534181</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713802534181</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +193,7 @@
     <MESSAGE value="Created HTMLExtrator and HTMLExtractorTest&#10;Added HTMLExtrator.getUrls and HTMLExtrator.getHeadings&#10;Reformatted all tests" />
     <MESSAGE value="Added HTMLExtrator.getHtmlWithNoComments&#10;Added tests to HTMLFetcherTest" />
     <MESSAGE value="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL" />
+    <MESSAGE value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
   </component>
 </project>
