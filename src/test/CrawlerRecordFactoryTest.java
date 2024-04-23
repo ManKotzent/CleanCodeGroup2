@@ -15,7 +15,7 @@ public class CrawlerRecordFactoryTest {
      @DisplayName("generateCrawlerRecordTest")
      class generateCrawlerRecordTest {
          @BeforeAll
-         private static void hostWebsite() throws IOException {
+         public static void hostWebsite() throws IOException {
              // Create an HTTP server on port 8000
              HttpServer server1 = HttpServer.create(new InetSocketAddress(8000), 0);
 

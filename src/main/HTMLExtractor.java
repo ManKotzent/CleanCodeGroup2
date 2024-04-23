@@ -4,10 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Class serves as an extractor object that receives a HTML String and returns lists of certain contents
- * */
+ * Class serves as an extractor object that receives an HTML String and returns lists of certain contents */
 public class HTMLExtractor {
-    private String html;
+    private final String html;
 
     public HTMLExtractor(String html) {
         this.html = html;
@@ -17,7 +16,7 @@ public class HTMLExtractor {
         List<String> urls = new LinkedList<>();
 
         // Regular expression to match URLs
-        String regex = "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)";
+        String regex = "https?://(www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)";
         //Regex as per: https://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url
         //Note: Will detect URLs in comments, specifications don't tell whether the crawler should detect those, however since
         //      this implementation proves to be easier and a crawler also checking comments for potential links seems sensible

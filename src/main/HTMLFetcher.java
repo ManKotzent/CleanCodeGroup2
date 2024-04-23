@@ -4,8 +4,7 @@ import java.net.URLConnection;
 import java.util.Scanner;
 
 /**
- * Class serves as a static factory that takes a URL and returns the found HTML as a String
- * */
+ * Class serves as a static factory that takes a URL and returns the found HTML as a String */
 public class HTMLFetcher {
     static public String fetchHtmlFromUrl(String url) throws IOException {
         //Solution as per: https://stackoverflow.com/questions/31462/how-to-fetch-html-in-java

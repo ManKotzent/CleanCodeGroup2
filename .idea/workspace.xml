@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added new test CrawlerRecordFactoryTest">
+      <change afterPath="$PROJECT_DIR$/src/test/ProFormaTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CrawlerRecordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CrawlerRecordFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HTMLExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HTMLFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLFetcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/MyHTMLTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestHTMLs/MyHTMLTestResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestHTMLs/MySite.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,36 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CrawlerRecordFactoryTest">
-    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
-      <option name="MAIN_CLASS_NAME" value="CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
-      <option name="MAIN_CLASS_NAME" value="CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-      <option name="METHOD_NAME" value="complexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
-      <option name="MAIN_CLASS_NAME" value="CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-      <option name="METHOD_NAME" value="complexTest2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.HTMLFetcherTest">
     <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
       <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
@@ -112,13 +85,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HTMLExtractorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HTMLExtractorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HTMLFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HTMLFetcherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProFormaTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CleanCodeGroup2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProFormaTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HTMLFetcherTest" />
+        <item itemvalue="JUnit.HTMLExtractorTest" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest" />
+        <item itemvalue="JUnit.ProFormaTests" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" />
-        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest2" />
-        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest" />
-        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713802534181</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added new test CrawlerRecordFactoryTest">
+      <created>1713875477980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713875477980</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +201,7 @@
     <MESSAGE value="Added HTMLExtrator.getHtmlWithNoComments&#10;Added tests to HTMLFetcherTest" />
     <MESSAGE value="Added CrawlerRecordFactory&#10;Modified HTML Fetcher such that it throws an IOException on a broken URL" />
     <MESSAGE value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
+    <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new test CrawlerRecordFactoryTest" />
   </component>
 </project>
