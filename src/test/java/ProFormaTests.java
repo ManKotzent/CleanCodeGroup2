@@ -1,3 +1,6 @@
+import org.cleanCode.CrawlerRecord;
+import org.cleanCode.HeaderType;
+import org.cleanCode.Heading;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;

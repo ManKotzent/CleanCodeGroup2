@@ -1,3 +1,5 @@
+package org.cleanCode;
+
 public class Heading {
     private String heading;
     private HeaderType headerType;

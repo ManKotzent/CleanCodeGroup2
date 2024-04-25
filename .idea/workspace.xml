@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added new test CrawlerRecordFactoryTest">
-      <change afterPath="$PROJECT_DIR$/src/test/ProFormaTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/markdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/translation/TranslatorApiCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CrawlerRecordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CrawlerRecordFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HTMLExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/HTMLFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HTMLFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CrawlerRecordFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanCodeGroup2.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +56,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2fBNtmryYrS9fANW7v9FJ3RhJx8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,24 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/filip/IdeaProjects/CleanCodeGroup2/build.gradle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\filip\IdeaProjects\CleanCodeGroup2\src\main" />
       <recent name="C:\Users\manue\OneDrive\Desktop\Bachelor_Informatik\24S\Clean Code\Project\CleanCodeGroup2\src\main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -65,16 +103,28 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HTMLFetcherTest">
-    <configuration name="CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CleanCodeGroup2" />
-      <option name="PACKAGE_NAME" value="CrawlerRecordFactoryTest" />
-      <option name="MAIN_CLASS_NAME" value="CrawlerRecordFactoryTest$generateCrawlerRecordTest" />
-      <option name="METHOD_NAME" value="complexTest3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.CleanCodeGroup2 [buildEnvironment]">
+    <configuration name="CleanCodeGroup2 [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildEnvironment" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="CrawlerRecordFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CleanCodeGroup2" />
@@ -114,13 +164,21 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CleanCodeGroup2 [buildEnvironment]" />
         <item itemvalue="JUnit.HTMLFetcherTest" />
         <item itemvalue="JUnit.HTMLExtractorTest" />
         <item itemvalue="JUnit.CrawlerRecordFactoryTest" />
         <item itemvalue="JUnit.ProFormaTests" />
-        <item itemvalue="JUnit.CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -130,6 +188,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
+      <workItem from="1713983334478" duration="2010000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -182,6 +241,9 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
