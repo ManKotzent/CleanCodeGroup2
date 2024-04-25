@@ -1,8 +1,8 @@
 import TestHTMLs.MfWebsiteTestResources;
 import TestHTMLs.MyHTMLTestResources;
-import org.cleanCode.HTMLExtractor;
-import org.cleanCode.HeaderType;
-import org.cleanCode.Heading;
+import org.cleanCode.HTML.HTMLExtractor;
+import HeaderType;
+import org.cleanCode.Heading.Heading;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

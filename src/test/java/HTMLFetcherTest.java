@@ -1,5 +1,5 @@
 import TestHTMLs.MfWebsiteTestResources;
-import org.cleanCode.HTMLFetcher;
+import org.cleanCode.HTML.HTMLFetcher;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

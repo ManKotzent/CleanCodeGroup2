@@ -1,4 +1,4 @@
-package org.cleanCode;
+package org.cleanCode.HTML;
 
 import java.io.IOException;
 import java.net.URL;

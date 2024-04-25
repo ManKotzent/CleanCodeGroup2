@@ -1,4 +1,6 @@
-package org.cleanCode;
+package org.cleanCode.CrawlerRecord;
+
+import org.cleanCode.Heading.Heading;
 
 import java.util.List;
 import java.util.StringJoiner;

@@ -1,4 +1,4 @@
-package org.cleanCode;
+package org.cleanCode.Heading;
 
 public class Heading {
     private String heading;

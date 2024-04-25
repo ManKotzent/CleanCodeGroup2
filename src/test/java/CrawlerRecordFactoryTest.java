@@ -1,8 +1,8 @@
 import TestHTMLs.MfWebsiteTestResources;
 import TestHTMLs.MyHTMLTestResources;
 import com.sun.net.httpserver.HttpServer;
-import org.cleanCode.CrawlerRecord;
-import org.cleanCode.CrawlerRecordFactory;
+import org.cleanCode.CrawlerRecord.CrawlerRecord;
+import org.cleanCode.CrawlerRecord.CrawlerRecordFactory;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;

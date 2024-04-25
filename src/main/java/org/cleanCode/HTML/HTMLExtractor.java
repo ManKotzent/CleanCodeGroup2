@@ -1,4 +1,7 @@
-package org.cleanCode;
+package org.cleanCode.HTML;
+
+import org.cleanCode.Heading.HeaderType;
+import org.cleanCode.Heading.Heading;
 
 import java.util.LinkedList;
 import java.util.List;
