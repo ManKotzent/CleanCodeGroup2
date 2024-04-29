@@ -31,6 +31,6 @@ public class Main {
         CrawlerRecord crawlerRecord = CrawlerRecordFactory.generateCrawlerRecord(url, depth);
 
         MarkdownFileCreator markdownFileCreator = new MarkdownFileCreator();
-        markdownFileCreator.createMdFile(crawlerRecord.toString());
+        markdownFileCreator.createMdFile(crawlerRecord.toFormattedString());
     }
 }

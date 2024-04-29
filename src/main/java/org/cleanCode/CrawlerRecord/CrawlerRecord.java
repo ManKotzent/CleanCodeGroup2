@@ -57,7 +57,7 @@ public class CrawlerRecord {
         isBroken = broken;
     }
 
-    //For testing purposes
+    @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner(", ", "CrawlerRecord{", "}");
         joiner.add("URL='" + URL + "'");
@@ -79,5 +79,63 @@ public class CrawlerRecord {
         joiner.add("isBroken=" + isBroken);
 
         return joiner.toString();
+    }
+
+    public String toFormattedString() {
+        return toStringFormattedPrivate(0);
+    }
+
+    //Note: This function was hacked together last minute to provide a more readable structure for use
+    //      in the MarkdownFileCreator. Future implementations will outsource this function to its
+    //      own class.
+    private String toStringFormattedPrivate(int depth) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(getTabsString(depth));
+        builder.append("CrawlerRecord {\n");
+        builder.append(getTabsString(depth));
+        builder.append("\tURL='").append(URL).append("',\n");
+
+        // Convert headings to string
+        if (headings != null) {
+            builder.append(getTabsString(depth));
+            builder.append("\theadings=[\n");
+            for(Heading heading : headings) {
+                builder.append(getTabsString(depth + 2));
+                builder.append(heading);
+                builder.append(",\n");
+            }
+            builder.append(getTabsString(depth));
+            builder.append("\t],\n");
+        } else {
+            builder.append(getTabsString(depth));
+            builder.append("\theadings=null,\n");
+        }
+
+        // Convert subSites to string
+        if (subSites != null) {
+            builder.append(getTabsString(depth));
+            builder.append("\tsubSites=[\n");
+            for(int i = 0; i < subSites.size(); i++) {
+                builder.append(subSites.get(i).toStringFormattedPrivate(depth + 2));
+                if(i != subSites.size() - 1) builder.append(",\n");
+            }
+            builder.append("\n");
+            builder.append(getTabsString(depth));
+            builder.append("\t],\n");
+        } else {
+            builder.append(getTabsString(depth));
+            builder.append("\tsubSites=null,\n");
+        }
+
+        builder.append(getTabsString(depth));
+        builder.append("\tisBroken=").append(isBroken).append("\n");
+        builder.append(getTabsString(depth));
+        builder.append("}");
+
+        return builder.toString();
+    }
+
+    private String getTabsString(int numOfTabs) {
+        return "\t".repeat(Math.max(0, numOfTabs));
     }
 }
