@@ -1,3 +1,5 @@
+package org.cleanCode.HTML;
+
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;

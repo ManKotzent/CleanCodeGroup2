@@ -1,5 +1,10 @@
 ### IntelliJ IDEA ###
 out/
+.gradle
+build
+gradlew
+gradlew.bat
+
 !**/src/main/**/out/
 !**/src/test/**/out/
 

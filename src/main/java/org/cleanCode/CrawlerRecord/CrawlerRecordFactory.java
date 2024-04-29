@@ -1,3 +1,9 @@
+package org.cleanCode.CrawlerRecord;
+
+import org.cleanCode.HTML.HTMLExtractor;
+import org.cleanCode.HTML.HTMLFetcher;
+import org.cleanCode.Heading.Heading;
+
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
