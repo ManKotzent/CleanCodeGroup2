@@ -11,7 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         CrawlerRecord record = CrawlerRecordFactory.generateCrawlerRecord(url,depth);
-        MarkdownFileCreator.createMdFile(record);
+        MarkdownFileCreator fileCreator = new MarkdownFileCreator();
+        fileCreator.createMdFile(record);
 
     }
 }
