@@ -31,7 +31,7 @@ public class MarkdownFileCreatorTest {
         crawlerRecord = mock(CrawlerRecord.class);
         when(crawlerRecord.getURL()).thenReturn("http://www.example.com");
 
-        fileCreator.createMdFile(crawlerRecord);
+        fileCreator.createMdFile(crawlerRecord, null,null);
 
         File file = new File("summary.md");
         assertTrue(file.exists());
@@ -44,7 +44,7 @@ public class MarkdownFileCreatorTest {
         crawlerRecord = mock(CrawlerRecord.class);
         when(crawlerRecord.getURL()).thenReturn(null);
 
-        assertThrows(NullPointerException.class, ()-> fileCreator.createMdFile(crawlerRecord));
+        assertThrows(NullPointerException.class, ()-> fileCreator.createMdFile(crawlerRecord,null,null));
     }
 
     @AfterEach

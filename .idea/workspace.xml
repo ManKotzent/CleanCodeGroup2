@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Refactored TranslatorApi Class. Created TranslatorApi Tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Implemented MarkdownFileCreatorTest/ Implemented AllTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AllTests.executor": "Run",
     "Gradle.CleanCodeGroup2 [:Main.main()].executor": "Run",
     "Gradle.CleanCodeGroup2 [build].executor": "Run",
     "Gradle.CleanCodeGroup2 [version].executor": "Run",
@@ -160,7 +161,20 @@
       <command value="gradlew version" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AllTests">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
+      <module name="CleanCodeGroup2.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cleanCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AllTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -233,30 +247,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorApiTest.mapJsonToLanguagesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TranslatorApiTest.mapJsonToLanguagesTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="TranslatorApiTest.sendTranslateCallFailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -282,19 +272,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.AllTests" />
       <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFile" />
       <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFileFail" />
-      <item itemvalue="Gradle.TranslatorApiTest.mapJsonToLanguagesTest" />
       <item itemvalue="Gradle.TranslatorApiTest.sendTranslateCallFailTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.AllTests" />
         <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFileFail" />
         <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFile" />
         <item itemvalue="Gradle.TranslatorApiTest.sendTranslateCallFailTest" />
-        <item itemvalue="Gradle.TranslatorApiTest.mapJsonToLanguagesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +306,7 @@
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
       <workItem from="1714155802042" duration="18935000" />
-      <workItem from="1714358792288" duration="3274000" />
+      <workItem from="1714358792288" duration="5911000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -375,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714359889124</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented MarkdownFileCreatorTest/ Implemented AllTests">
+      <option name="closed" value="true" />
+      <created>1714385882264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385882264</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +415,8 @@
     <MESSAGE value="Sorted Java Classes into Packages; Created AllTests" />
     <MESSAGE value="Solved Import errors" />
     <MESSAGE value="Refactored TranslatorApi Class. Created TranslatorApi Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored TranslatorApi Class. Created TranslatorApi Tests" />
+    <MESSAGE value="Implemented MarkdownFileCreatorTest/ Implemented AllTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented MarkdownFileCreatorTest/ Implemented AllTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

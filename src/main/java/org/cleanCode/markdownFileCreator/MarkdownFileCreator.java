@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class MarkdownFileCreator {
 
 
-    public  void createMdFile(CrawlerRecord record){
+    public  void createMdFile(CrawlerRecord record, String lngSource, String lngTarget){
         if(record == null || record.getURL() == null){
             throw new NullPointerException();
         }
@@ -19,7 +19,7 @@ public class MarkdownFileCreator {
             PrintWriter printWriter = new PrintWriter(fileWriter);
 
 
-            buildReport(record,fileWriter);
+            buildReport(record,fileWriter, lngSource, lngTarget);
 
             printWriter.close();
             fileWriter.close();
@@ -28,7 +28,7 @@ public class MarkdownFileCreator {
         }
     }
 
-    private void buildReport(CrawlerRecord record, FileWriter writer) throws IOException {
+    private void buildReport(CrawlerRecord record, FileWriter writer, String lngSource, String lngTarget) throws IOException {
         try{
             writer.write("input: <a><a>\n");
             writer.write("<br>depth: "+record.getURL()+"\n");

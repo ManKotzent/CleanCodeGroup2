@@ -31,7 +31,7 @@ public class TranslatorApi {
         this.client = client;
     }
 
-    public String sendGetLanguagesCall() throws IOException, InterruptedException {
+    private String sendGetLanguagesCall() throws IOException, InterruptedException {
         try{
             HttpRequest request = buildGetLanguagesRequest();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -53,7 +53,7 @@ public class TranslatorApi {
                 .build();
     }
 
-    private void getLanguagesAsMap(){
+    public Map<String,String> getLanguages(){
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = sendGetLanguagesCall();
@@ -62,13 +62,12 @@ public class TranslatorApi {
             for(int i = 0; i<languagesNode.size();i++){
                 String code = languagesNode.get(i).get("code").asText();
                 String name = languagesNode.get(i).get("name").asText();
-                languages.put(code,name);
+                languages.put(name,code);
             }
-        }catch(JsonProcessingException | NullPointerException e){
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
+            return languages;
+        }catch(JsonProcessingException e){
+            throw new RuntimeException("Error getting languages", e);
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
