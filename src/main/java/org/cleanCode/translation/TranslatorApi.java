@@ -31,7 +31,7 @@ public class TranslatorApi {
         this.client = client;
     }
 
-    private String sendGetLanguagesCall() throws IOException, InterruptedException {
+    public String sendGetLanguagesCall() throws IOException, InterruptedException {
         try{
             HttpRequest request = buildGetLanguagesRequest();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());

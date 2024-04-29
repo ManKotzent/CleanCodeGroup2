@@ -30,7 +30,7 @@ public class TranslatorApiTest {
 
     @Test
     @DisplayName("GetLanguagesCall Test")
-    void getLanguagesCallTest() throws IOException, InterruptedException {
+    void sendLanguagesCallTest() throws IOException, InterruptedException {
         mockedClient = mock(HttpClient.class);
         mockedResponse = mock(HttpResponse.class);
 
@@ -48,7 +48,7 @@ public class TranslatorApiTest {
 
     @Test
     @DisplayName("GetLanguagesCall Fail Test")
-    void getLanguagesCallFailTest() throws IOException, InterruptedException {
+    void sendLanguagesCallFailTest() throws IOException, InterruptedException {
         mockedClient = mock(HttpClient.class);
         mockedResponse = mock(HttpResponse.class);
 

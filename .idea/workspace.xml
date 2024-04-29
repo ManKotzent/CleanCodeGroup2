@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Implemented MarkdownFileCreatorTest/ Implemented AllTests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Implementation of dialog" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -306,7 +300,7 @@
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
       <workItem from="1714155802042" duration="18935000" />
-      <workItem from="1714358792288" duration="5911000" />
+      <workItem from="1714358792288" duration="6252000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -373,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714385882264</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implementation of dialog">
+      <option name="closed" value="true" />
+      <created>1714388551097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714388551097</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +418,8 @@
     <MESSAGE value="Solved Import errors" />
     <MESSAGE value="Refactored TranslatorApi Class. Created TranslatorApi Tests" />
     <MESSAGE value="Implemented MarkdownFileCreatorTest/ Implemented AllTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented MarkdownFileCreatorTest/ Implemented AllTests" />
+    <MESSAGE value="Implementation of dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of dialog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
