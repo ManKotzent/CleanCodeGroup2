@@ -2,6 +2,8 @@
 out/
 .gradle
 build
+example.md
+gradle.properties
 gradlew
 gradlew.bat
 
