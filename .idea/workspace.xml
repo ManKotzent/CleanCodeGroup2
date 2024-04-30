@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="fully implemented dialog in main">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Finished MarkdownFileCreator/heading translation is possible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/markdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/translation/TranslatorApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CleanCodeGroup2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CleanCodeGroup2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CleanCodeGroup2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -92,7 +100,9 @@
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.AllTests.executor": "Run",
     "Gradle.CleanCodeGroup2 [:Main.main()].executor": "Run",
+    "Gradle.CleanCodeGroup2 [build jar].executor": "Run",
     "Gradle.CleanCodeGroup2 [build].executor": "Run",
+    "Gradle.CleanCodeGroup2 [jar].executor": "Run",
     "Gradle.CleanCodeGroup2 [version].executor": "Run",
     "Gradle.CleanCodeGroup2.executor": "Run",
     "Gradle.CrawlerRecordFactoryTest.executor": "Run",
@@ -151,9 +161,10 @@
       <command value="gradlew --warning-mode all" />
       <command value="gradlew build --stacktrace" />
       <command value="gradlew version" />
+      <command value="gradle build jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.AllTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
       <module name="CleanCodeGroup2.main" />
@@ -191,7 +202,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MarkdownFileCreatorTest.createMdFileFail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CleanCodeGroup2 [build jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -202,17 +213,38 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;MarkdownFileCreatorTest.createMdFileFail&quot;" />
+            <option value="build" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CleanCodeGroup2 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="TranslatorApiTest.sendLanguagesCallTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -239,44 +271,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TranslatorApiTest.sendTranslateCallFailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TranslatorApiTest.sendTranslateCallFailTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.CleanCodeGroup2 [build jar]" />
+      <item itemvalue="Gradle.CleanCodeGroup2 [jar]" />
       <item itemvalue="Gradle.TranslatorApiTest.sendLanguagesCallTest" />
       <item itemvalue="Gradle.AllTests" />
-      <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFileFail" />
-      <item itemvalue="Gradle.TranslatorApiTest.sendTranslateCallFailTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.AllTests" />
+        <item itemvalue="Gradle.CleanCodeGroup2 [build jar]" />
+        <item itemvalue="Gradle.CleanCodeGroup2 [jar]" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.TranslatorApiTest.sendLanguagesCallTest" />
-        <item itemvalue="Gradle.TranslatorApiTest.sendTranslateCallFailTest" />
-        <item itemvalue="Gradle.MarkdownFileCreatorTest.createMdFileFail" />
       </list>
     </recent_temporary>
   </component>
@@ -381,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714488149520</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finished MarkdownFileCreator/heading translation is possible">
+      <option name="closed" value="true" />
+      <created>1714499975105</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499975105</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +457,8 @@
     <MESSAGE value="Implemented MarkdownFileCreatorTest/ Implemented AllTests" />
     <MESSAGE value="Implementation of dialog" />
     <MESSAGE value="fully implemented dialog in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="fully implemented dialog in main" />
+    <MESSAGE value="Finished MarkdownFileCreator/heading translation is possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished MarkdownFileCreator/heading translation is possible" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

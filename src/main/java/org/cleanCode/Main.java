@@ -23,6 +23,7 @@ public class Main {
 
         MarkdownFileCreator fileCreator = new MarkdownFileCreator();
         fileCreator.createMdFile(record,lngSource,lngTarget,depth);
+        System.out.println("Done");
     }
 
 
