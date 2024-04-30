@@ -3,7 +3,6 @@ out/
 .gradle
 build
 gradle.properties
-gradlew
 gradlew.bat
 
 !**/src/main/**/out/
