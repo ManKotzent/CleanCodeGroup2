@@ -86,5 +86,4 @@ public class CrawlerRecordFactoryTest {
              assertEquals("CrawlerRecord{URL='https://laflkfnssjhaklhf.com', headings=null, subSites=null, isBroken=true}", crawlerRecord.toString());
          }
      }
-
 }

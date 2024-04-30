@@ -82,60 +82,64 @@ public class CrawlerRecord {
     }
 
     public String toFormattedString() {
-        return toStringFormattedPrivate(0);
+        return toFormattedString(0, 0);
     }
 
-    //Note: This function was hacked together last minute to provide a more readable structure for use
-    //      in the MarkdownFileCreator. Future implementations will outsource this function to its
-    //      own class.
-    private String toStringFormattedPrivate(int depth) {
+    private String toFormattedString(int baseNumOfTabs, int depth) {
         StringBuilder builder = new StringBuilder();
-        builder.append(getTabsString(depth));
-        builder.append("CrawlerRecord {\n");
-        builder.append(getTabsString(depth));
-        builder.append("\tURL='").append(URL).append("',\n");
+
+        //Convert depth, URL and isBroken to string
+        appendBuilderWithNewLine(builder, baseNumOfTabs, "CrawlerRecord {");
+        appendBuilderWithNewLine(builder, baseNumOfTabs, "Depth=" + depth);
+        appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "URL='" + URL + "',");
+        appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "isBroken=" + isBroken + ",");
 
         // Convert headings to string
-        if (headings != null) {
-            builder.append(getTabsString(depth));
-            builder.append("\theadings=[\n");
-            for(Heading heading : headings) {
-                builder.append(getTabsString(depth + 2));
-                builder.append(heading);
-                builder.append(",\n");
+        if (headings != null && subSites.size() != 0) {
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "headings=[");
+            for(int i = 0; i < headings.size(); i++) {
+                appendBuilderWithNewLine(builder, baseNumOfTabs + 2, listObjectToString(headings, i));
             }
-            builder.append(getTabsString(depth));
-            builder.append("\t],\n");
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "],");
         } else {
-            builder.append(getTabsString(depth));
-            builder.append("\theadings=null,\n");
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "headings=null,");
         }
 
         // Convert subSites to string
-        if (subSites != null) {
-            builder.append(getTabsString(depth));
-            builder.append("\tsubSites=[\n");
+        if (subSites != null && subSites.size() != 0) {
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "subSites=[");
             for(int i = 0; i < subSites.size(); i++) {
-                builder.append(subSites.get(i).toStringFormattedPrivate(depth + 2));
-                if(i != subSites.size() - 1) builder.append(",\n");
+                CrawlerRecord subSite = subSites.get(i);
+                String subSiteString = subSite.toFormattedString(baseNumOfTabs + 2, depth + 1);
+                builder.append(subSiteString);
+
+                if(i < subSites.size() - 1) builder.append(",\n");
             }
-            builder.append("\n");
-            builder.append(getTabsString(depth));
-            builder.append("\t],\n");
+            appendBuilderWithString(builder, 0, "\n");
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "]");
         } else {
-            builder.append(getTabsString(depth));
-            builder.append("\tsubSites=null,\n");
+            appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "subSites=null");
         }
 
-        builder.append(getTabsString(depth));
-        builder.append("\tisBroken=").append(isBroken).append("\n");
-        builder.append(getTabsString(depth));
-        builder.append("}");
+        appendBuilderWithString(builder, baseNumOfTabs, "}");
 
         return builder.toString();
     }
 
+    private void appendBuilderWithNewLine(StringBuilder builder, int numOfTabs, String lineContent) {
+        builder.append(getTabsString(numOfTabs)).append(lineContent).append("\n");
+    }
+
+    private void appendBuilderWithString(StringBuilder builder, int numOfTabs, String lineContent) {
+        builder.append(getTabsString(numOfTabs)).append(lineContent);
+    }
+
     private String getTabsString(int numOfTabs) {
         return "\t".repeat(Math.max(0, numOfTabs));
+    }
+
+    private <T> String listObjectToString(List<T> list, int i) {
+        if (i < list.size() - 1)    return list.get(i).toString() + ", ";
+        else                        return list.get(i).toString();
     }
 }
