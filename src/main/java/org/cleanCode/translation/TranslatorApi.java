@@ -61,7 +61,7 @@ public class TranslatorApi {
             JsonNode languagesNode = jsonNode.get("data").get("languages");
             for(int i = 0; i<languagesNode.size();i++){
                 String code = languagesNode.get(i).get("code").asText();
-                String name = languagesNode.get(i).get("name").asText();
+                String name = languagesNode.get(i).get("name").asText().toLowerCase();
                 languages.put(name,code);
             }
             return languages;
@@ -72,7 +72,7 @@ public class TranslatorApi {
         }
     }
 
-    private void printLanguages(){
+    public void printLanguages(){
         for(Map.Entry<String,String> entry : languages.entrySet()){
             System.out.println(entry.getKey() + " -> "+entry.getValue());
         }
