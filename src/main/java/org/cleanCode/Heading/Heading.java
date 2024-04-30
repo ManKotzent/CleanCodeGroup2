@@ -25,6 +25,7 @@ public class Heading {
         this.headerType = headerType;
     }
 
+    @Override
     public String toString() {
         return "Heading{" +
                 "heading='" + heading + '\'' +
