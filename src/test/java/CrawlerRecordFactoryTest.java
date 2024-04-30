@@ -3,7 +3,6 @@ import TestHTMLs.MyHTMLTestResources;
 import com.sun.net.httpserver.HttpServer;
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
 import org.cleanCode.CrawlerRecord.CrawlerRecordFactory;
-import org.cleanCode.markdownFileCreator.MarkdownFileCreator;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
@@ -86,13 +85,5 @@ public class CrawlerRecordFactoryTest {
              CrawlerRecord crawlerRecord = CrawlerRecordFactory.generateCrawlerRecord("https://laflkfnssjhaklhf.com", 0);
              assertEquals("CrawlerRecord{URL='https://laflkfnssjhaklhf.com', headings=null, subSites=null, isBroken=true}", crawlerRecord.toString());
          }
-
-         @Test
-         public void printTest() {
-             CrawlerRecord crawlerRecord = CrawlerRecordFactory.generateCrawlerRecord("http://localhost:8001", 2);
-             MarkdownFileCreator markdownFileCreator = new MarkdownFileCreator();
-             markdownFileCreator.createMdFile(crawlerRecord.toFormattedString());
-         }
      }
-
 }
