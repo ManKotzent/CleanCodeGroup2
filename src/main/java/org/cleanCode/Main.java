@@ -22,7 +22,7 @@ public class Main {
         CrawlerRecord record = CrawlerRecordFactory.generateCrawlerRecord(url,depth);
 
         MarkdownFileCreator fileCreator = new MarkdownFileCreator();
-        fileCreator.createMdFile(record,lngSource,lngTarget);
+        fileCreator.createMdFile(record,lngSource,lngTarget,depth);
     }
 
 
@@ -72,14 +72,13 @@ public class Main {
                 answered = true;
 
                 while(lngSource == null) {
-                    System.out.println("Enter Source Language ");
+                    System.out.println("Enter Source Language (i.e. english, german, italian, etc.)");
                     userInput = scanner.nextLine().toLowerCase();
                     lngSource = languages.getOrDefault(userInput,null);
                     if(lngSource == null){
                         System.out.println("Source Language was not found. Either the language is not supported or the input contains a misspelling");
                     }
                 }
-                userInput = null;
                 while(lngTarget == null){
                     System.out.println("Enter Target Language: ");
                     userInput = scanner.nextLine().toLowerCase();

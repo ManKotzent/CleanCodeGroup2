@@ -97,7 +97,7 @@ public class TranslatorApi {
 
     private String parseText(String text){
         text = text.replace(" ","%20");
-        text += "%3F";
+        text = text.replace("?","%3F");
         return text;
     }
 
@@ -113,16 +113,17 @@ public class TranslatorApi {
     }
 
 
-    private String getTranslatedText(String json){
+    public String getTranslatedText(String lngSource, String lngTarget, String text){
+
         ObjectMapper objectMapper = new ObjectMapper();
         try{
+            String json = sendTranslateCall(lngSource,lngTarget,text);
             JsonNode jsonNode = objectMapper.readTree(json);
             JsonNode translatedText = jsonNode.get("data").get("translatedText");
             return translatedText.asText();
-        }catch(JsonProcessingException | NullPointerException e){
-            System.out.println(e.getMessage());
+        } catch(NullPointerException | IOException | InterruptedException e){
+            throw new RuntimeException(e);
         }
-        return null;
     }
 
 
