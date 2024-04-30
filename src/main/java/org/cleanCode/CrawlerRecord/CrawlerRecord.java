@@ -95,7 +95,7 @@ public class CrawlerRecord {
         appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "isBroken=" + isBroken + ",");
 
         // Convert headings to string
-        if (headings != null) {
+        if (headings != null && subSites.size() != 0) {
             appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "headings=[");
             for(int i = 0; i < headings.size(); i++) {
                 appendBuilderWithNewLine(builder, baseNumOfTabs + 2, listObjectToString(headings, i));
@@ -106,7 +106,7 @@ public class CrawlerRecord {
         }
 
         // Convert subSites to string
-        if (subSites != null) {
+        if (subSites != null && subSites.size() != 0) {
             appendBuilderWithNewLine(builder, baseNumOfTabs + 1, "subSites=[");
             for(int i = 0; i < subSites.size(); i++) {
                 CrawlerRecord subSite = subSites.get(i);
