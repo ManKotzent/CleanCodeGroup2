@@ -17,8 +17,26 @@ import java.util.List;
  * 3. The scraping continues - the HTML page is searched for headings and URLs. Further, deeper records for these URLs
  *    are created and compiled into a list. The current URL, the found headings and the created list of deeper sub-sites
  *    are saved in the new record which is then returned*/
-public class CrawlerRecordFactory {
-    public static CrawlerRecord generateCrawlerRecord (String url, int depth) {
+public class CrawlerRecordFactory extends Thread {
+    private final String url;
+    private final int depth;
+    private CrawlerRecord record;
+
+    public CrawlerRecordFactory(String url, int depth) {
+        this.url = url;
+        this.depth = depth;
+    }
+
+    @Override
+    public void run() {
+        this.record = generateCrawlerRecord(this.url, this.depth);
+    }
+
+    public CrawlerRecord getRecord() {
+        return this.record;
+    }
+
+    static public CrawlerRecord generateCrawlerRecord (String url, int depth) {
         CrawlerRecord crawlerRecord;
 
         try {
