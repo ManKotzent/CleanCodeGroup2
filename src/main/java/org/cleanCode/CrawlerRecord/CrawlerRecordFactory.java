@@ -28,43 +28,54 @@ public class CrawlerRecordFactory extends Thread {
     }
 
     @Override
-    public void run() {
-        this.record = generateCrawlerRecord(this.url, this.depth);
-    }
+    public void run() { this.generateCrawlerRecord(); }
 
     public CrawlerRecord getRecord() {
         return this.record;
     }
 
-    static public CrawlerRecord generateCrawlerRecord (String url, int depth) {
+    public void generateCrawlerRecord () {
         CrawlerRecord crawlerRecord;
 
         try {
-            String html = HTMLFetcher.fetchHtmlFromUrl(url);
+            String html = HTMLFetcher.fetchHtmlFromUrl(this.url);
 
             //If the maximum depth is reached, create a simple record
-            if(depth == 0) {
-                crawlerRecord = new CrawlerRecord(url, false);
+            if(this.depth == 0) {
+                crawlerRecord = new CrawlerRecord(this.url, false);
 
-            //If the maximum depth isn't reached, go deeper recursively
+                //If the maximum depth isn't reached, go deeper recursively
             } else {
-                HTMLExtractor htmlExtractor = new HTMLExtractor(html);
+                HTMLExtractor htmlExtractor = new HTMLExtractor(html, this.url);
                 List<Heading> headings = htmlExtractor.getHeadings();
                 List<String> urls = htmlExtractor.getUrls();
                 List<CrawlerRecord> subSites = new LinkedList<>();
 
+                List<CrawlerRecordFactory> crawlerRecordFactories = new LinkedList<>();
+
                 for(String url_ : urls) {
-                    subSites.add(generateCrawlerRecord(url_, depth - 1));
+                    CrawlerRecordFactory crawlerRecordFactory = new CrawlerRecordFactory(url_, this.depth - 1);
+                    crawlerRecordFactory.start();
+                    crawlerRecordFactories.add(crawlerRecordFactory);
                 }
 
-                crawlerRecord = new CrawlerRecord(url, headings, subSites);
+                for(CrawlerRecordFactory crawlerRecordFactory : crawlerRecordFactories) {
+                    try {
+                        crawlerRecordFactory.join();
+                        subSites.add(crawlerRecordFactory.getRecord());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                crawlerRecord = new CrawlerRecord(this.url, headings, subSites);
             }
 
         } catch (IOException e) {
             //If the url is broken, create a simple record
-            crawlerRecord = new CrawlerRecord(url, true);
+            crawlerRecord = new CrawlerRecord(this.url, true);
         }
 
-        return crawlerRecord;
+        this.record = crawlerRecord;
     }
 }

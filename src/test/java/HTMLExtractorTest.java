@@ -16,9 +16,9 @@ public class HTMLExtractorTest {
     @Nested
     @DisplayName("getUrls Test")
     class getUrlsTest {
-        @DisplayName("Simple Test")
+        @DisplayName("Simple Test 1")
         @Test
-        void simpleTest() {
+        void simpleTest1() {
             String html = "<a href=\"https://www.example.com\">Example</a> " +
                     "<a href='http://anotherexample.com'>Another Example</a>";
             HTMLExtractor htmlExtractor = new HTMLExtractor(html);
@@ -31,9 +31,22 @@ public class HTMLExtractorTest {
             assertEquals("http://anotherexample.com", urls.get(1));
         }
 
+        @DisplayName("Simple Test 2")
+        @Test
+        void simpleTest2() {
+            String html = "<a href=\"/subsite\">Example</a>";
+            HTMLExtractor htmlExtractor = new HTMLExtractor(html, "https://www.example.com/");
+
+            List<String> urls = htmlExtractor.getUrls();
+
+            assertEquals(1, urls.size());
+
+            assertEquals("https://www.example.com/subsite", urls.get(0));
+        }
+
         @DisplayName("Complex Test")
         @Test
-        void complexTest() {
+        void complexTest1() {
             String html = MfWebsiteTestResources.html;
             HTMLExtractor htmlExtractor = new HTMLExtractor(html);
 
@@ -42,6 +55,23 @@ public class HTMLExtractorTest {
             assertEquals(1, urls.size());
 
             assertEquals("https://www.vitsoe.com/us/about/good-design", urls.get(0));
+        }
+
+        @DisplayName("Complex Test 2")
+        @Test
+        void complexTest2() {
+            String html = "<a href=\"https://www.example.com\">SelfLink</a> " +
+                    "<a href='http://anotherexample.com'>Another Example</a>" +
+                    "<a href=\"/subsite\">Example</a>";
+            HTMLExtractor htmlExtractor = new HTMLExtractor(html, "https://www.example.com/");
+
+            List<String> urls = htmlExtractor.getUrls();
+
+            assertEquals(3, urls.size());
+
+            assertEquals("https://www.example.com", urls.get(0));
+            assertEquals("http://anotherexample.com", urls.get(1));
+            assertEquals("https://www.example.com/subsite", urls.get(2));
         }
     }
 

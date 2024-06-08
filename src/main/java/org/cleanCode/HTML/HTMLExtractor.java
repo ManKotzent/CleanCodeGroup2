@@ -2,8 +2,9 @@ package org.cleanCode.HTML;
 
 import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;
+import org.cleanCode.URLHandler.UrlHandler;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,13 +13,31 @@ import java.util.regex.Pattern;
  * Class serves as an extractor object that receives an HTML String and returns lists of certain contents */
 public class HTMLExtractor {
     private final String html;
+    private final String websiteUrl;
 
     public HTMLExtractor(String html) {
         this.html = html;
+        this.websiteUrl = null;
+    }
+
+    public HTMLExtractor(String html, String url) {
+        this.html = html;
+        this.websiteUrl = UrlHandler.getWebsiteUrl(url);
     }
 
     public List<String> getUrls() {
-        List<String> urls = new LinkedList<>();
+
+        List<String> urls = new ArrayList<>(getUrlOccurrences());
+
+        if(this.websiteUrl != null) {
+            urls.addAll(getRelativeUrlOccurrences());
+        }
+
+        return urls;
+    }
+
+    private List<String> getUrlOccurrences() {
+        List<String> urls = new ArrayList<>();
 
         // Regular expression to match URLs
         String regex = "https?://(www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)";
@@ -27,11 +46,32 @@ public class HTMLExtractor {
         //      this implementation proves to be easier and a crawler also checking comments for potential links seems sensible
         //      this solution was chosen.
         Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(html);
+        Matcher matcher = pattern.matcher(this.html);
 
         // Find URLs and add them to the list
         while (matcher.find()) {
             urls.add(matcher.group());
+        }
+
+        return urls;
+    }
+
+    private List<String> getRelativeUrlOccurrences() {
+        List<String> urls = new ArrayList<>();
+
+        // Regular expression pattern to match <a> tags with href attribute and extract link text
+        Pattern pattern = Pattern.compile("<a[^>]+href=['\"]([^'\"]+)['\"][^>]*>(.*?)</a>");
+        Matcher matcher = pattern.matcher(this.html);
+
+        while (matcher.find()) {
+            String url = matcher.group(1);
+
+            if(!UrlHandler.startsWithHttp_s(url)) {
+                if(url.startsWith("/"))
+                    urls.add(this.websiteUrl + url.substring(1));
+                else
+                    urls.add(this.websiteUrl + url);
+            }
         }
 
         return urls;
@@ -46,7 +86,7 @@ public class HTMLExtractor {
     }
 
     public List<Heading> getHeadings() {
-        List<Heading> headings = new LinkedList<>();
+        List<Heading> headings = new ArrayList<>();
 
         // Regular expression to match headings
         String regex = "<h([1-6])>(.*?)</h\\1>";

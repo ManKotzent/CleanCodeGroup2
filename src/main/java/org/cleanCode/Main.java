@@ -19,7 +19,9 @@ public class Main {
         TranslatorApi translator = new TranslatorApi();
         languages = translator.getLanguages();
         dialog();
-        CrawlerRecord record = CrawlerRecordFactory.generateCrawlerRecord(url,depth);
+        CrawlerRecordFactory crawlerRecordFactory = new CrawlerRecordFactory(url, depth);
+        crawlerRecordFactory.generateCrawlerRecord();
+        CrawlerRecord record = crawlerRecordFactory.getRecord();
 
         MarkdownFileCreator fileCreator = new MarkdownFileCreator();
         fileCreator.createMdFile(record,lngSource,lngTarget,depth);
