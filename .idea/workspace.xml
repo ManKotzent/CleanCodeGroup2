@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added Threading Functionality to CrawlerRecordFactory">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created basis for Main.main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/HTML/HTMLFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/HTML/HTMLFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Heading/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Heading/Heading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" afterDir="false" />
     </list>
@@ -53,18 +55,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-        <option value="development" />
-      </list>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,7 +89,7 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Backup/CleanCodeGroup2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -116,7 +110,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.generateCrawlerRecordTest.multithreadingTest">
+  <component name="RunManager" selected="Gradle.AllTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
       <module name="CleanCodeGroup2.main" />
@@ -153,7 +147,28 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.complexTest3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CleanCodeGroup2 [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildEnvironment" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="generateCrawlerRecordTest.complexTest1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3&quot;" />
+            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -176,7 +191,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.multithreadingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="generateCrawlerRecordTest.printTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -189,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.multithreadingTest&quot;" />
+            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.printTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,43 +214,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
-      <item itemvalue="Gradle.AllTests" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
         <item itemvalue="Gradle.AllTests" />
+        <item itemvalue="Gradle.generateCrawlerRecordTest.printTest" />
+        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest1" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.CleanCodeGroup2 [buildEnvironment]" />
       </list>
     </recent_temporary>
   </component>
@@ -344,7 +329,6 @@
     <MESSAGE value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
-    <MESSAGE value="Added Threading Functionality to CrawlerRecordFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Threading Functionality to CrawlerRecordFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created basis for Main.main" />
   </component>
 </project>

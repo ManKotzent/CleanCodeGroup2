@@ -1,4 +1,4 @@
-package org.cleanCode.translation;
+package org.cleanCode.Translation;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,9 +1,9 @@
-package org.cleanCode.markdownFileCreator;
+package org.cleanCode.MarkdownFileCreator;
 
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
 import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;
-import org.cleanCode.translation.TranslatorApi;
+import org.cleanCode.Translation.TranslatorApi;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
