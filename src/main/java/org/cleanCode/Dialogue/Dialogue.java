@@ -4,16 +4,18 @@ import org.cleanCode.Parameters.Parameters;
 import java.util.Scanner;
 
 public class Dialogue {
-    private Parameters parameters;
+    private final Parameters parameters;
+    private final Scanner scanner;
 
     public Dialogue(Parameters parameters) {
         this.parameters = parameters;
+        this.scanner = new Scanner(System.in);
     }
 
-    private void urlDialog(Scanner scanner){
-        String userInput = null;
+    private void urlDialog(){
+        String userInput = "";
 
-        while (userInput == null||userInput.isEmpty()) {
+        while (userInput.isEmpty()) {
             System.out.println("Enter url: ");
             userInput = scanner.nextLine();
             parameters.setUrl(userInput);
@@ -24,7 +26,7 @@ public class Dialogue {
         }
     }
 
-    private void depthDialog(Scanner scanner){
+    private void depthDialog(){
         String userInput;
         System.out.println("Enter a positive number for depth (1 by default):");
         userInput = scanner.nextLine();
@@ -43,7 +45,7 @@ public class Dialogue {
         }
     }
 
-    private void languageDialog(Scanner scanner){
+    private void languageDialog(){
         String userInput;
         boolean answered = false;
         while (!answered) {
@@ -78,8 +80,8 @@ public class Dialogue {
         }
     }
 
-    public void dialogue(){
-        System.out.println("""
+    private String getCard(){
+        return """
                 =====================================
                     Clean Code Project S24
                 =====================================
@@ -89,11 +91,14 @@ public class Dialogue {
                    Manuel Kotzent
                    Filipp Eder
                 =====================================
-                """);
-        Scanner scanner = new Scanner(System.in);
-        urlDialog(scanner);
-        depthDialog(scanner);
-        languageDialog(scanner);
+                """;
+    }
+
+    public void dialogue(){
+        System.out.println(getCard());
+        urlDialog();
+        depthDialog();
+        languageDialog();
         scanner.close();
         System.out.println("URL: "+parameters.getUrl()+", Depth: "+parameters.getDepth());
         if(parameters.getLngSource() != null && parameters.getLngTarget() != null){

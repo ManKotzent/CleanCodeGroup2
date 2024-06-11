@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created basis for Main.main">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/HtmlParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/JsoupHtmlParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/FormattingTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownAllTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/HTML/HTMLFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/HTML/HTMLFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Heading/Heading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Heading/Heading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/CrawlerRecordFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HTMLExtractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/HTMLExtractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HTMLFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/HTMLFetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProFormaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/ProFormaTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestHTMLs/MfWebsiteTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TestHTMLs/MfWebsiteTestResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestHTMLs/MyHTMLTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TestHTMLs/MyHTMLTestResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TranslatorApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TranslatorApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UrlHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/UrlHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,30 +89,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Backup/CleanCodeGroup2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AllTests.executor": "Run",
+    "Gradle.CleanCodeGroup2 [clean build].executor": "Run",
+    "Gradle.CrawlerRecordFactoryTest.executor": "Run",
+    "Gradle.FormattingTests.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString2.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString3.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags1.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags2.executor": "Run",
+    "Gradle.MarkdownAllTests.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFile (1).executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFile.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFileCrawlerRecordNull.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.testTranslation.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Backup/CleanCodeGroup2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\filip\IdeaProjects\CleanCodeGroup2\src\main" />
@@ -110,21 +141,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AllTests">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
-      <module name="CleanCodeGroup2.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cleanCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AllTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean build" />
+      <command value="gradle clean build -x test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.FormattingTests.testCreateUrlWithArrowString3">
+    <configuration name="FormattingTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +161,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;AllTests&quot;" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,30 +169,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CleanCodeGroup2 [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildEnvironment" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="generateCrawlerRecordTest.complexTest1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FormattingTests.testCreateUrlWithArrowString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -181,7 +185,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest1&quot;" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests.testCreateUrlWithArrowString&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,9 +193,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.printTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FormattingTests.testCreateUrlWithArrowString2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -204,7 +209,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.printTest&quot;" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests.testCreateUrlWithArrowString2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -212,23 +217,72 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FormattingTests.testCreateUrlWithArrowString3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests.testCreateUrlWithArrowString3&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FormattingTests.testHeaderTypeToHashtags2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests.testHeaderTypeToHashtags2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AllTests" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.printTest" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest1" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.CleanCodeGroup2 [buildEnvironment]" />
+        <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString3" />
+        <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString2" />
+        <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString" />
+        <item itemvalue="Gradle.FormattingTests" />
+        <item itemvalue="Gradle.FormattingTests.testHeaderTypeToHashtags2" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -241,6 +295,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
+      <workItem from="1718061654125" duration="7164000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -330,5 +385,25 @@
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
     <option name="LAST_COMMIT_MESSAGE" value="Created basis for Main.main" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java</url>
+          <line>56</line>
+          <properties class="org.cleanCode.MarkdownFileCreatorTests.MarkdownFileCreatorTest" method="testTranslation">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

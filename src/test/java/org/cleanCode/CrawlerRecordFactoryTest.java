@@ -1,5 +1,7 @@
-import TestHTMLs.MfWebsiteTestResources;
-import TestHTMLs.MyHTMLTestResources;
+package org.cleanCode;
+
+import org.cleanCode.TestHTMLs.MfWebsiteTestResources;
+import org.cleanCode.TestHTMLs.MyHTMLTestResources;
 import com.sun.net.httpserver.HttpServer;
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
 import org.cleanCode.CrawlerRecord.CrawlerRecordFactory;

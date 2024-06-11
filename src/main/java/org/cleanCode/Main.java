@@ -19,11 +19,12 @@ public class Main {
 
         CrawlerRecordFactory crawlerRecordFactory = new CrawlerRecordFactory(parameters.getUrl(), parameters.getDepth());
         crawlerRecordFactory.generateCrawlerRecord();
-        CrawlerRecord record = crawlerRecordFactory.getRecord();
 
-        MarkdownFileCreator fileCreator = new MarkdownFileCreator();
-        fileCreator.createMdFile(record, parameters.getLngSource(), parameters.getLngTarget(), parameters.getDepth());
+        CrawlerRecord record = crawlerRecordFactory.getRecord();
+        MarkdownFileCreator fileCreator = new MarkdownFileCreator(record, parameters);
+        fileCreator.createMdFile();
         System.out.println("Done");
+
     }
 
 }

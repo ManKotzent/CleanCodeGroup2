@@ -1,5 +1,7 @@
-import TestHTMLs.MfWebsiteTestResources;
-import TestHTMLs.MyHTMLTestResources;
+package org.cleanCode;
+
+import org.cleanCode.TestHTMLs.MfWebsiteTestResources;
+import org.cleanCode.TestHTMLs.MyHTMLTestResources;
 import org.cleanCode.HTML.HTMLExtractor;
 import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;
