@@ -8,7 +8,6 @@ public class Parameters {
     private int depth;
     private String lngSource;
     private String lngTarget;
-    private Map<String,String> languages;
 
     public String getUrl() {
         return url;
@@ -40,14 +39,6 @@ public class Parameters {
 
     public void setLngTarget(String lngTarget) {
         this.lngTarget = lngTarget;
-    }
-
-    public Map<String, String> getLanguages() {
-        return languages;
-    }
-
-    public void setLanguages(Map<String, String> languages) {
-        this.languages = languages;
     }
 
 }

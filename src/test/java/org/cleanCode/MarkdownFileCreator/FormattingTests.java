@@ -1,8 +1,7 @@
-package org.cleanCode.MarkdownFileCreatorTests;
+package org.cleanCode.MarkdownFileCreator;
 
 import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;
-import org.cleanCode.MarkdownFileCreator.Formatting;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

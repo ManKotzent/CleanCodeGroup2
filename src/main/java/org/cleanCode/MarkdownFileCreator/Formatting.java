@@ -5,7 +5,7 @@ import org.cleanCode.Heading.Heading;
 
 public class Formatting {
 
-    public static String createUrlWithArrowString(int depth, String url, boolean broken){
+    protected static String createUrlWithArrowString(int depth, String url, boolean broken){
         StringBuilder result = new StringBuilder("<br>");
         result.append("--".repeat(Math.max(0, depth)));
         result.append("> ");
@@ -19,7 +19,7 @@ public class Formatting {
         return result.toString();
     }
 
-    public static String headerTypeToHashtags(Heading heading){
+    protected static String headerTypeToHashtags(Heading heading){
         HeaderType headerType = heading.getHeaderType();
         int amount = 0;
         switch (headerType){

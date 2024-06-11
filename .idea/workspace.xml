@@ -4,28 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Created basis for Main.main">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/HtmlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/JsoupHtmlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/FormattingTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownAllTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/CrawlerRecordFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HTMLExtractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/HTMLExtractorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HTMLFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/HTMLFetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MarkdownFileCreatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProFormaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/ProFormaTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestHTMLs/MfWebsiteTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TestHTMLs/MfWebsiteTestResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestHTMLs/MyHTMLTestResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TestHTMLs/MyHTMLTestResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TranslatorApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/TranslatorApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UrlHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/UrlHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/FormattingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/FormattingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownAllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +83,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.AllTests.executor": "Run",
+    "Gradle.CleanCodeGroup2 [:Main.main()].executor": "Debug",
     "Gradle.CleanCodeGroup2 [clean build].executor": "Run",
     "Gradle.CrawlerRecordFactoryTest.executor": "Run",
     "Gradle.FormattingTests.executor": "Run",
@@ -101,7 +91,7 @@
     "Gradle.FormattingTests.testCreateUrlWithArrowString2.executor": "Run",
     "Gradle.FormattingTests.testCreateUrlWithArrowString3.executor": "Run",
     "Gradle.FormattingTests.testHeaderTypeToHashtags.executor": "Run",
-    "Gradle.FormattingTests.testHeaderTypeToHashtags1.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags1.executor": "Debug",
     "Gradle.FormattingTests.testHeaderTypeToHashtags2.executor": "Run",
     "Gradle.MarkdownAllTests.executor": "Run",
     "Gradle.MarkdownFileCreatorTest.createMdFile (1).executor": "Run",
@@ -147,30 +137,19 @@
       <command value="gradle clean build -x test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.FormattingTests.testCreateUrlWithArrowString3">
-    <configuration name="FormattingTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
+      <module name="CleanCodeGroup2.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cleanCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="FormattingTests.testCreateUrlWithArrowString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -244,7 +223,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="FormattingTests.testHeaderTypeToHashtags2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FormattingTests.testHeaderTypeToHashtags1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -257,7 +236,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.cleanCode.MarkdownFileCreatorTests.FormattingTests.testHeaderTypeToHashtags2&quot;" />
+            <option value="&quot;org.cleanCode.MarkdownFileCreator.FormattingTests.testHeaderTypeToHashtags1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -270,11 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FormattingTests.testHeaderTypeToHashtags1" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString3" />
         <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString2" />
         <item itemvalue="Gradle.FormattingTests.testCreateUrlWithArrowString" />
-        <item itemvalue="Gradle.FormattingTests" />
-        <item itemvalue="Gradle.FormattingTests.testHeaderTypeToHashtags2" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +274,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
-      <workItem from="1718061654125" duration="7164000" />
+      <workItem from="1718061654125" duration="15124000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -346,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713875477980</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator">
+      <option name="closed" value="true" />
+      <created>1718069166813</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718069166813</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +371,8 @@
     <MESSAGE value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created basis for Main.main" />
+    <MESSAGE value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,14 +382,243 @@
           <line>8</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java</url>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
           <line>56</line>
-          <properties class="org.cleanCode.MarkdownFileCreatorTests.MarkdownFileCreatorTest" method="testTranslation">
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java</url>
+          <line>56</line>
+          <properties class="org.cleanCode.MarkdownFileCreator.MarkdownFileCreatorTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>36</line>
+          <properties class="org.cleanCode.CrawlerRecord.CrawlerRecordFactory" method="generateCrawlerRecord">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

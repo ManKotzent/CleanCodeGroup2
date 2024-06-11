@@ -1,4 +1,4 @@
-package org.cleanCode.MarkdownFileCreatorTests;
+package org.cleanCode.MarkdownFileCreator;
 
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;

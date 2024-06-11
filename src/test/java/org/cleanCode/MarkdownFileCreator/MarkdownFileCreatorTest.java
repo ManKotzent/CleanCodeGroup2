@@ -1,7 +1,6 @@
-package org.cleanCode.MarkdownFileCreatorTests;
+package org.cleanCode.MarkdownFileCreator;
 
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
-import org.cleanCode.MarkdownFileCreator.MarkdownFileCreator;
 import org.cleanCode.Parameters.Parameters;
 import org.cleanCode.Translation.TranslatorApi;
 import org.junit.jupiter.api.AfterEach;
@@ -30,7 +29,6 @@ public class MarkdownFileCreatorTest {
         parameters.setDepth(1);
         parameters.setLngSource(null);
         parameters.setLngTarget(null);
-        parameters.setLanguages(null);
     }
 
     @DisplayName("CreateMdFile Test")
@@ -38,7 +36,7 @@ public class MarkdownFileCreatorTest {
     void createMdFile() {
         crawlerRecordMock = mock(CrawlerRecord.class);
 
-        fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
+   //     fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
         fileCreator.createMdFile();
 
         File file = new File("summary.md");
@@ -58,7 +56,7 @@ public class MarkdownFileCreatorTest {
         crawlerRecordMock = mock(CrawlerRecord.class);
         parameters.setLngSource("");
         parameters.setLngTarget("");
-        fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
+       // fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
 
         translatorApiMock = mock(TranslatorApi.class);
         when(translatorApiMock.getTranslatedText("", "", "")).thenReturn("translated text");

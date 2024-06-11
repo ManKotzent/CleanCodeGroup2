@@ -1,18 +1,25 @@
 package org.cleanCode.Dialogue;
 
+import org.cleanCode.CrawlerRecord.CrawlerRecordFactory;
 import org.cleanCode.Parameters.Parameters;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Dialogue {
-    private final Parameters parameters;
+    private List<Parameters> parametersList;
     private final Scanner scanner;
+    private final Map<String,String> languages;
 
-    public Dialogue(Parameters parameters) {
-        this.parameters = parameters;
+    public Dialogue(List<Parameters> parameters, Map<String,String> languages) {
+        this.parametersList = parameters;
+        this.languages = languages;
         this.scanner = new Scanner(System.in);
     }
 
-    private void urlDialog(){
+    private void urlDialog(Parameters parameters){
         String userInput = "";
 
         while (userInput.isEmpty()) {
@@ -26,7 +33,7 @@ public class Dialogue {
         }
     }
 
-    private void depthDialog(){
+    private void depthDialog(Parameters parameters){
         String userInput;
         System.out.println("Enter a positive number for depth (1 by default):");
         userInput = scanner.nextLine();
@@ -45,7 +52,7 @@ public class Dialogue {
         }
     }
 
-    private void languageDialog(){
+    private void languageDialog(Parameters parameters){
         String userInput;
         boolean answered = false;
         while (!answered) {
@@ -58,7 +65,7 @@ public class Dialogue {
                 while(parameters.getLngSource() == null) {
                     System.out.println("Enter Source Language (i.e. english, german, italian, etc.)");
                     userInput = scanner.nextLine().toLowerCase();
-                    parameters.setLngSource(parameters.getLanguages().getOrDefault(userInput,null));
+                    parameters.setLngSource(languages.getOrDefault(userInput,null));
                     if(parameters.getLngSource() == null){
                         System.out.println("Source Language was not found. Either the language is not supported or the input contains a misspelling");
                     }
@@ -66,7 +73,7 @@ public class Dialogue {
                 while(parameters.getLngTarget() == null){
                     System.out.println("Enter Target Language: ");
                     userInput = scanner.nextLine().toLowerCase();
-                    parameters.setLngTarget(parameters.getLanguages().getOrDefault(userInput,null));
+                    parameters.setLngTarget(languages.getOrDefault(userInput,null));
                     if(parameters.getLngTarget() == null){
                         System.out.println("Target Language was not found. Either the language is not supported or the input contains a misspelling");
                     }
@@ -94,16 +101,52 @@ public class Dialogue {
                 """;
     }
 
-    public void dialogue(){
-        System.out.println(getCard());
-        urlDialog();
-        depthDialog();
-        languageDialog();
-        scanner.close();
+    public void dialogue(Parameters parameters){
+        urlDialog(parameters);
+        depthDialog(parameters);
+        languageDialog(parameters);
         System.out.println("URL: "+parameters.getUrl()+", Depth: "+parameters.getDepth());
         if(parameters.getLngSource() != null && parameters.getLngTarget() != null){
             System.out.println("Source Language: "+parameters.getLngSource()+", Target Language: "+parameters.getLngTarget());
         }
         System.out.println("Your request is processing. Please wait...");
+    }
+
+    public int multithreadingDialogueSetNumber(){
+
+        String userInput;
+        System.out.println("Enter number of crawlers you want to run (1 by default):");
+        userInput = scanner.nextLine();
+
+        if (userInput.isEmpty()) {
+            System.out.println("You didn't enter a number. Set 1 by default.");
+        } else if(Integer.parseInt(userInput) < 1){
+            System.out.println("You entered an invalid number. Set 1 by default.");
+        } else {
+            try{
+                System.out.println("Number of crawlers to run: " + userInput);
+                return Integer.parseInt(userInput);
+            }catch (NumberFormatException e){
+                System.out.println("You entered an invalid number. Set 1 by default.");
+            }
+        }
+        return 1;
+    }
+
+    public List<CrawlerRecordFactory> multithreadingDialogue(){
+        System.out.println(getCard());
+        List<CrawlerRecordFactory> factories = new ArrayList<>();
+
+        int threads = multithreadingDialogueSetNumber();
+        for(int i = 0; i < threads; i++){
+            Parameters parameters = new Parameters();
+            System.out.println("Setting up thread number "+(i+1));
+            dialogue(parameters);
+            parametersList.add(parameters);
+            CrawlerRecordFactory factory = new CrawlerRecordFactory(parameters.getUrl(),parameters.getDepth());
+            factories.add(factory);
+        }
+        scanner.close();
+        return factories;
     }
 }

@@ -1,6 +1,6 @@
 package org.cleanCode;
 
-import org.cleanCode.MarkdownFileCreatorTests.MarkdownAllTests;
+import org.cleanCode.MarkdownFileCreator.MarkdownAllTests;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 import org.junit.platform.suite.api.SuiteDisplayName;
