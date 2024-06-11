@@ -1,4 +1,5 @@
-import org.cleanCode.translation.TranslatorApi;
+package org.cleanCode.Translation;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package TestHTMLs;
+package org.cleanCode.TestHTMLs;
 
 public class MfWebsiteTestResources {
     public static final String url = "https://motherfuckingwebsite.com/";
