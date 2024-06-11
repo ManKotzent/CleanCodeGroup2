@@ -20,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorPackageAllTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,8 +135,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\filip\IdeaProjects\CleanCodeGroup2\src\main" />
