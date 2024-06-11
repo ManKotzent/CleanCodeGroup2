@@ -1,7 +1,6 @@
 package org.cleanCode.MarkdownFileCreator;
 
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
-import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;
 import org.cleanCode.Parameters.Parameters;
 import org.cleanCode.Translation.TranslatorApi;
@@ -9,7 +8,6 @@ import org.cleanCode.Translation.TranslatorApi;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.Parameter;
 import java.util.List;
 
 public class MarkdownFileCreator {
@@ -48,7 +46,7 @@ public class MarkdownFileCreator {
     }
 
 
-    private void buildSummaryHead(FileWriter writer, Parameters parameters) throws IOException {
+    private void buildSummaryHead(FileWriter writer, Parameters parameters) {
         try{
             writer.write("input: <a>"+parameters.getUrl()+"<a>\n");
             writer.write("<br>depth: "+parameters.getDepth()+"\n");
@@ -59,11 +57,11 @@ public class MarkdownFileCreator {
             writer.write("<br>summary:\n");
             writer.flush();
         }catch (IOException e){
-            System.err.println(e.getMessage());
+            throw new RuntimeException("MarkdownFileCreator.buildSummaryHead: IOException "+e.getMessage());
         }
     }
 
-    private void buildSummaryBody(FileWriter writer, Parameters parameters, CrawlerRecord record) throws IOException {
+    private void buildSummaryBody(FileWriter writer, Parameters parameters, CrawlerRecord record) {
         try{
             List<Heading> headings = record.getHeadings();
             writeHeadings(writer, headings, parameters);
@@ -92,14 +90,18 @@ public class MarkdownFileCreator {
                     writer.flush();
                 }
         } catch (IOException e){
-            System.err.println(e.getMessage());
+           throw new RuntimeException("MarkdownFileCreator.buildSummaryBody: IOException"+e.getMessage());
         }
     }
 
-    private void writeHeadings(FileWriter writer, List<Heading> headings, Parameters parameters) throws IOException {
-        for (Heading heading : headings) {
-            writer.write(Formatting.headerTypeToHashtags(heading) + " " + parseHeaderHTML(heading.getHeading(), parameters));
-            writer.write("\n");
+    private void writeHeadings(FileWriter writer, List<Heading> headings, Parameters parameters) {
+        try {
+            for (Heading heading : headings) {
+                writer.write(Formatting.headerTypeToHashtags(heading) + " " + parseHeaderHTML(heading.getHeading(), parameters));
+                writer.write("\n");
+            }
+        }catch (IOException e){
+            throw new RuntimeException("MarkdownFileCreator.writeHeadings: IOException"+e.getMessage());
         }
     }
 

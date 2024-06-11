@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Dialogue {
-    private List<Parameters> parametersList;
+    private final List<Parameters> parametersList;
     private final Scanner scanner;
     private final Map<String,String> languages;
 

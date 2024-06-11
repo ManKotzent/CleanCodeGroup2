@@ -6,6 +6,6 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
 @SuiteDisplayName("MarkdownFile Creation All Tests")
-@SelectClasses({MarkdownAllTests.class, FormattingTests.class})
+@SelectClasses({MarkdownFileCreatorTest.class, FormattingTests.class})
 public class MarkdownAllTests {
 }

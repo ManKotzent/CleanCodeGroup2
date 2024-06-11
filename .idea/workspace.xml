@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JacksonJsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JsonParser.java" afterDir="false" />
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Decoupled Jackson package from TranslatorApi into JacksonJsonParser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/TranslatorApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/Translation/TranslatorApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,7 @@
       <module name="CleanCodeGroup2.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.cleanCode.*" />
+          <option name="PATTERN" value="org.cleanCode.Translation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -271,7 +271,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
-      <workItem from="1718061654125" duration="18408000" />
+      <workItem from="1718061654125" duration="20892000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -338,7 +338,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718102482030</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Decoupled Jackson package from TranslatorApi into JacksonJsonParser">
+      <option name="closed" value="true" />
+      <created>1718128001469</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718128001469</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +386,8 @@
     <MESSAGE value="Created basis for Main.main" />
     <MESSAGE value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
     <MESSAGE value="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name" />
+    <MESSAGE value="Decoupled Jackson package from TranslatorApi into JacksonJsonParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Decoupled Jackson package from TranslatorApi into JacksonJsonParser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -387,111 +396,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java</url>
           <line>8</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>

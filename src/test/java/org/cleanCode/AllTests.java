@@ -1,6 +1,7 @@
 package org.cleanCode;
 
 import org.cleanCode.MarkdownFileCreator.MarkdownAllTests;
+import org.cleanCode.Translation.TranslatorApiTest;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 import org.junit.platform.suite.api.SuiteDisplayName;
