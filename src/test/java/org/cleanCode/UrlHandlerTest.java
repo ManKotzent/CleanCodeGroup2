@@ -1,3 +1,5 @@
+package org.cleanCode;
+
 import org.cleanCode.URLHandler.UrlHandler;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

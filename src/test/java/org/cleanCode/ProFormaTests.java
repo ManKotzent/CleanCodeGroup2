@@ -1,3 +1,5 @@
+package org.cleanCode;
+
 import org.cleanCode.CrawlerRecord.CrawlerRecord;
 import org.cleanCode.Heading.HeaderType;
 import org.cleanCode.Heading.Heading;

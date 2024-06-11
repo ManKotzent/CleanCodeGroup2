@@ -1,4 +1,4 @@
-package TestHTMLs;
+package org.cleanCode.TestHTMLs;
 
 public class MyHTMLTestResources {
     public final static String html = """

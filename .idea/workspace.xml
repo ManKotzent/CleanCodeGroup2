@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added Threading Functionality to CrawlerRecordFactory">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Reformated TranslatorApi">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/JsoupHtmlParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/Translation/JacksonJsonParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/Translation/TranslationPackageAllTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/JsoupHtmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/JsoupHtmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JacksonJsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JacksonJsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorPackageAllTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +57,7 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,18 +65,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-        <option value="development" />
-      </list>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,30 +84,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Project/CleanCodeGroup2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AllTests.executor": "Run",
+    "Gradle.CleanCodeGroup2 [:Main.main()].executor": "Run",
+    "Gradle.CleanCodeGroup2 [clean build].executor": "Run",
+    "Gradle.CrawlerRecordFactoryTest.executor": "Run",
+    "Gradle.FormattingTests.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString2.executor": "Run",
+    "Gradle.FormattingTests.testCreateUrlWithArrowString3.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags.executor": "Run",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags1.executor": "Debug",
+    "Gradle.FormattingTests.testHeaderTypeToHashtags2.executor": "Run",
+    "Gradle.JacksonJsonParserTest.executor": "Run",
+    "Gradle.JacksonJsonParserTest.testGetAllLanguages.executor": "Run",
+    "Gradle.JacksonJsonParserTest.testGetTranslatedText.executor": "Run",
+    "Gradle.JacksonJsonParserTest.testGetTranslatedTextEmpty.executor": "Run",
+    "Gradle.JacksonJsonParserTest.testGetTranslatedTextNull.executor": "Run",
+    "Gradle.JsoupHtmlParserTest.testParse.executor": "Run",
+    "Gradle.JsoupHtmlParserTest.testParseEmpty.executor": "Run",
+    "Gradle.JsoupHtmlParserTest.testParseNull.executor": "Run",
+    "Gradle.MarkdownAllTests.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFile (1).executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFile.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFileCrawlerRecordIsEmpty.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.createMdFileCrawlerRecordNull.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.executor": "Run",
+    "Gradle.MarkdownFileCreatorTest.testTranslation.executor": "Run",
+    "Gradle.TranslatorApiTest.sendLanguagesCallFailTest.executor": "Run",
+    "Gradle.TranslatorApiTest.sendTranslateCallFailTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/manue/OneDrive/Desktop/Bachelor_Informatik/24S/Clean Code/Backup/CleanCodeGroup2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\filip\IdeaProjects\CleanCodeGroup2\src\main" />
@@ -116,20 +148,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.generateCrawlerRecordTest.multithreadingTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
-      <module name="CleanCodeGroup2.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cleanCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean build" />
+      <command value="gradle clean build -x test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.AllTests">
     <configuration name="AllTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -143,7 +168,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;AllTests&quot;" />
+            <option value="&quot;org.cleanCode.AllTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -151,9 +176,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.complexTest3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JacksonJsonParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +192,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.complexTest3&quot;" />
+            <option value="&quot;org.cleanCode.Translation.JacksonJsonParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -174,9 +200,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.multithreadingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JacksonJsonParserTest.testGetAllLanguages" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -189,7 +216,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.multithreadingTest&quot;" />
+            <option value="&quot;org.cleanCode.Translation.JacksonJsonParserTest.testGetAllLanguages&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -197,9 +224,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="generateCrawlerRecordTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JacksonJsonParserTest.testGetTranslatedText" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -212,7 +240,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;CrawlerRecordFactoryTest$generateCrawlerRecordTest.test&quot;" />
+            <option value="&quot;org.cleanCode.Translation.JacksonJsonParserTest.testGetTranslatedText&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,30 +248,48 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
-      <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
-      <item itemvalue="Gradle.AllTests" />
-    </list>
+    <configuration name="JacksonJsonParserTest.testGetTranslatedTextEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.cleanCode.Translation.JacksonJsonParserTest.testGetTranslatedTextEmpty&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
         <item itemvalue="Gradle.AllTests" />
+        <item itemvalue="Gradle.JacksonJsonParserTest.testGetTranslatedText" />
+        <item itemvalue="Gradle.JacksonJsonParserTest.testGetAllLanguages" />
+        <item itemvalue="Gradle.JacksonJsonParserTest" />
+        <item itemvalue="Gradle.JacksonJsonParserTest.testGetTranslatedTextEmpty" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -256,6 +302,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
+      <workItem from="1718061654125" duration="28350000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -306,13 +353,50 @@
       <option name="project" value="LOCAL" />
       <updated>1713875477980</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator">
+      <option name="closed" value="true" />
+      <created>1718069166813</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718069166813</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name">
+      <option name="closed" value="true" />
+      <created>1718102482030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718102482030</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Decoupled Jackson package from TranslatorApi into JacksonJsonParser">
+      <option name="closed" value="true" />
+      <created>1718128001469</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718128001469</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Reformated TranslatorApi">
+      <option name="closed" value="true" />
+      <created>1718130342806</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718130342806</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="dfaa3237-e747-4e41-b466-580dd2e4c139" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -332,6 +416,11 @@
             </State>
           </value>
         </entry>
+        <entry key="dfaa3237-e747-4e41-b466-580dd2e4c139">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
@@ -344,7 +433,88 @@
     <MESSAGE value="Added CrawlerRecordFactoryTest&#10;Added toString functions for testing purposes" />
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
-    <MESSAGE value="Added Threading Functionality to CrawlerRecordFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Threading Functionality to CrawlerRecordFactory" />
+    <MESSAGE value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
+    <MESSAGE value="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name" />
+    <MESSAGE value="Decoupled Jackson package from TranslatorApi into JacksonJsonParser" />
+    <MESSAGE value="Reformated TranslatorApi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformated TranslatorApi" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java</url>
+          <line>56</line>
+          <properties class="org.cleanCode.MarkdownFileCreator.MarkdownFileCreatorTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java</url>
+          <line>115</line>
+          <properties class="org.cleanCode.MarkdownFileCreator.MarkdownFileCreator" method="parseHeaderHTML">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cleanCode/Translation/JacksonJsonParserTest.java</url>
+          <line>31</line>
+          <properties class="org.cleanCode.Translation.JacksonJsonParserTest" method="testGetTranslatedText">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
