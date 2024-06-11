@@ -21,6 +21,9 @@ public class JacksonJsonParser implements JsonParser{
 
     @Override
     public String getTranslatedText(String json) {
+        if(json == null || json.isEmpty()){
+            throw new IllegalArgumentException("json is null or empty");
+        }
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             JsonNode jsonNode = objectMapper.readTree(json);
@@ -32,7 +35,10 @@ public class JacksonJsonParser implements JsonParser{
     }
 
     @Override
-    public Map<String, String> jsonGetAllLanguages(String json) {
+    public Map<String, String> getAllLanguages(String json) {
+        if(json == null || json.isEmpty()){
+            throw new IllegalArgumentException("json is null or empty");
+        }
         JsonNode languagesNode = jsonGetLanguageNode(json);
         Map<String, String> languages = new HashMap<>();
         for(int i = 0; i<languagesNode.size();i++){

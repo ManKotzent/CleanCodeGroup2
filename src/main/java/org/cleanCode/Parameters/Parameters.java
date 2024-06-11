@@ -1,13 +1,11 @@
 package org.cleanCode.Parameters;
 
-import java.util.Map;
-
 public class Parameters {
 
     private String url;
     private int depth;
-    private String lngSource;
-    private String lngTarget;
+    private String sourceLanguage;
+    private String targetLanguage;
 
     public String getUrl() {
         return url;
@@ -25,20 +23,20 @@ public class Parameters {
         this.depth = depth;
     }
 
-    public String getLngSource() {
-        return lngSource;
+    public String getSourceLanguage() {
+        return sourceLanguage;
     }
 
-    public void setLngSource(String lngSource) {
-        this.lngSource = lngSource;
+    public void setSourceLanguage(String sourceLanguage) {
+        this.sourceLanguage = sourceLanguage;
     }
 
-    public String getLngTarget() {
-        return lngTarget;
+    public String getTargetLanguage() {
+        return targetLanguage;
     }
 
-    public void setLngTarget(String lngTarget) {
-        this.lngTarget = lngTarget;
+    public void setTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
     }
 
 }

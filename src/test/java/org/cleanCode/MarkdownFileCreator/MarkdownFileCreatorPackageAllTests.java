@@ -6,6 +6,6 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
 @SuiteDisplayName("MarkdownFile Creation All Tests")
-@SelectClasses({MarkdownFileCreatorTest.class, FormattingTests.class})
-public class MarkdownAllTests {
+@SelectClasses({MarkdownFileCreatorTest.class, JsoupHtmlParser.class, FormattingTests.class})
+public class MarkdownFileCreatorPackageAllTests {
 }

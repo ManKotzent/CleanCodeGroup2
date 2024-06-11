@@ -4,5 +4,5 @@ import java.util.Map;
 
 public interface JsonParser {
     String getTranslatedText(String text);
-    Map<String, String> jsonGetAllLanguages(String json);
+    Map<String, String> getAllLanguages(String json);
 }

@@ -7,6 +7,7 @@ import org.cleanCode.MarkdownFileCreator.MarkdownFileCreator;
 import org.cleanCode.Parameters.Parameters;
 import org.cleanCode.Translation.TranslatorApi;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,12 @@ public class Main {
 
         TranslatorApi translator = new TranslatorApi();
         Map<String, String> languages;
-        languages = translator.getLanguages();
+        try {
+            languages = translator.getLanguages();
+        }catch (IOException | InterruptedException e){
+            System.err.println(e.getMessage());
+            return;
+        }
         Dialogue dialogue = new Dialogue(parametersList, languages);
 
         crawlerRecordFactories = dialogue.multithreadingDialogue();
@@ -42,7 +48,11 @@ public class Main {
         }
 
         MarkdownFileCreator fileCreator = new MarkdownFileCreator(crawlerRecords, parametersList);
-        fileCreator.createMdFile();
+        try {
+            fileCreator.createMdFile();
+        }catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
         System.out.println("Done");
 
     }

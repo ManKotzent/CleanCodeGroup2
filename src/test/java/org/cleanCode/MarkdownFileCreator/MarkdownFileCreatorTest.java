@@ -9,34 +9,36 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 @DisplayName("MarkdownFileCreator Tests")
 public class MarkdownFileCreatorTest {
 
     private MarkdownFileCreator fileCreator;
-    private CrawlerRecord crawlerRecordMock;
-    private Parameters parameters;
     private TranslatorApi translatorApiMock;
+    private List<Parameters> parametersListMock;
+    private List<CrawlerRecord> crawlerRecordListMock;
 
     @BeforeEach
     void setUp() {
-        parameters = new Parameters();
-        parameters.setUrl("https://www.Test.com");
-        parameters.setDepth(1);
-        parameters.setLngSource(null);
-        parameters.setLngTarget(null);
+        crawlerRecordListMock = new ArrayList<>();
+        parametersListMock = new ArrayList<>();
+        fileCreator = new MarkdownFileCreator(crawlerRecordListMock,parametersListMock);
     }
 
     @DisplayName("CreateMdFile Test")
     @Test
-    void createMdFile() {
-        crawlerRecordMock = mock(CrawlerRecord.class);
+    void createMdFile() throws IOException {
+        CrawlerRecord crawlerRecord = mock(CrawlerRecord.class);
+        Parameters parameters = mock(Parameters.class);
+        crawlerRecordListMock.add(crawlerRecord);
+        parametersListMock.add(parameters);
 
-   //     fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
         fileCreator.createMdFile();
 
         File file = new File("summary.md");
@@ -44,31 +46,23 @@ public class MarkdownFileCreatorTest {
         assertTrue(file.isFile());
     }
 
-    @DisplayName("CreateMdFile Fail Test if CrawlerRecord is null")
+    @DisplayName("CreateMdFile Fail Test if CrawlerRecord is empty")
     @Test
     void createMdFileCrawlerRecordNull() {
-        assertThrows(NullPointerException.class, ()-> fileCreator.createMdFile());
+        fileCreator = new MarkdownFileCreator(null,parametersListMock);
+        assertThrows(IllegalArgumentException.class, ()-> fileCreator.createMdFile());
     }
 
-    @DisplayName("Test CreateMdFile with translation")
+    @DisplayName("CreateMdFile Fail Test if CrawlerRecord is null")
     @Test
-    void testTranslation(){
-        crawlerRecordMock = mock(CrawlerRecord.class);
-        parameters.setLngSource("");
-        parameters.setLngTarget("");
-       // fileCreator = new MarkdownFileCreator(crawlerRecordMock, parameters);
-
-        translatorApiMock = mock(TranslatorApi.class);
-        when(translatorApiMock.getTranslatedText("", "", "")).thenReturn("translated text");
-        fileCreator.setTranslatorApi(translatorApiMock);
-
-        fileCreator.createMdFile();
+    void createMdFileCrawlerRecordIsEmpty() {
+        assertThrows(IllegalArgumentException.class, ()-> fileCreator.createMdFile());
     }
 
     @AfterEach
     void tearDown() {
         fileCreator = null;
-        crawlerRecordMock = null;
-        parameters = null;
+        parametersListMock.clear();
+        crawlerRecordListMock.clear();
     }
 }

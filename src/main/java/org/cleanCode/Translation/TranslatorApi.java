@@ -29,33 +29,53 @@ public class TranslatorApi {
         this.client = client;
     }
 
-    public String getTranslatedText(String sourceLanguage, String targetLanguage, String text){
-            String json = sendTranslateCall(sourceLanguage,targetLanguage,text);
-            return jsonParser.getTranslatedText(json);
+    public String getTranslatedText(String sourceLanguage, String targetLanguage, String text) throws IOException, InterruptedException {
+        if (sourceLanguage == null || targetLanguage == null) {
+            throw new IllegalArgumentException("sourceLanguage and targetLanguage cannot be null");
+        }
+        String json;
+        try {
+            json = sendTranslateCall(sourceLanguage, targetLanguage, text);
+        } catch (IOException e) {
+            throw new IOException("TranslatorApi.getTranslatedText failed", e);
+        } catch (InterruptedException e) {
+            throw new InterruptedException("TranslatorApi.getTranslatedText failed"+e.getMessage());
+        }
+        if (json == null) {
+            throw new NullPointerException("TranslationApi.getTranslatedText: json response is null; Possible rapidApi error");
+        }
+        return jsonParser.getTranslatedText(json);
     }
 
-    public Map<String,String> getLanguages(){
-        String json = sendGetLanguagesCall();
-        languages = jsonParser.jsonGetAllLanguages(json);
-        if(languages.isEmpty()){
-            throw new NullPointerException("TranslatorApi.getLanguages: no languages found; Possible api failure");
+    public Map<String,String> getLanguages() throws IOException, InterruptedException {
+        String json;
+        try {
+            json = sendGetLanguagesCall();
+        } catch (IOException e) {
+            throw new IOException("TranslationApi.getLanguages: IOException");
+        } catch (InterruptedException e) {
+            throw new InterruptedException("TranslationApi.getLanguages: Interrupted Exception");
+        }
+        languages = jsonParser.getAllLanguages(json);
+        if (languages.isEmpty()) {
+            throw new NullPointerException("TranslatorApi.getLanguages: languages response is empty; Possible rapidApi error");
         }
         return languages;
     }
 
-    protected String sendGetLanguagesCall()  {
+    protected String sendGetLanguagesCall() throws IOException, InterruptedException {
         try{
             HttpRequest request = buildGetLanguagesRequest();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             return response.body();
         }catch(IOException e){
-            throw new RuntimeException("TranslatorApi.sendGetLanguagesCall: IOException. "+e.getMessage());
+            throw new IOException("TranslatorApi.sendGetLanguagesCall: IOException. "+e.getMessage());
         }catch (InterruptedException e){
-            throw new RuntimeException("TranslatorApi.sendGetLanguagesCall: InterruptedException. "+e.getMessage());
+            throw new InterruptedException("TranslatorApi.sendGetLanguagesCall: InterruptedException. "+e.getMessage());
         }
     }
 
-    protected String sendTranslateCall(String sourceLanguage, String targetLanguage, String text) {
+    protected String sendTranslateCall(String sourceLanguage, String targetLanguage, String text) throws IOException, InterruptedException{
         if(sourceLanguage == null || targetLanguage == null || text == null){
             throw new NullPointerException("TranslatorApi.sendTranslateCall NullPointerException");
         }
@@ -64,9 +84,9 @@ public class TranslatorApi {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             return response.body();
         }catch(IOException e){
-            throw new RuntimeException("TranslatorApi.sendTranslateCall: IOException. "+e.getMessage());
+            throw new IOException("TranslatorApi.sendTranslateCall: IOException. "+e.getMessage());
         }catch(InterruptedException e){
-            throw new RuntimeException("TranslatorApi.sendTranslateCall: InterruptedException. "+e.getMessage());
+            throw new InterruptedException("TranslatorApi.sendTranslateCall: InterruptedException. "+e.getMessage());
         }
     }
 

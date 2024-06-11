@@ -19,6 +19,29 @@ public class Dialogue {
         this.scanner = new Scanner(System.in);
     }
 
+    public List<CrawlerRecordFactory> multithreadingDialogue(){
+        if(parametersList == null){
+            throw new IllegalArgumentException("ParametersList object is null");
+        }
+        if(languages == null){
+            throw new IllegalArgumentException("Languages object is null");
+        }
+        System.out.println(getCard());
+        List<CrawlerRecordFactory> factories = new ArrayList<>();
+
+        int threads = multithreadingDialogueSetNumber();
+        for(int i = 0; i < threads; i++){
+            Parameters parameters = new Parameters();
+            System.out.println("Setting up thread number "+(i+1));
+            dialogue(parameters);
+            parametersList.add(parameters);
+            CrawlerRecordFactory factory = new CrawlerRecordFactory(parameters.getUrl(),parameters.getDepth());
+            factories.add(factory);
+        }
+        scanner.close();
+        return factories;
+    }
+
     private void urlDialog(Parameters parameters){
         String userInput = "";
 
@@ -62,19 +85,19 @@ public class Dialogue {
             if (userInput.equals("yes")) {
                 answered = true;
 
-                while(parameters.getLngSource() == null) {
+                while(parameters.getSourceLanguage() == null) {
                     System.out.println("Enter Source Language (i.e. english, german, italian, etc.)");
                     userInput = scanner.nextLine().toLowerCase();
-                    parameters.setLngSource(languages.getOrDefault(userInput,null));
-                    if(parameters.getLngSource() == null){
+                    parameters.setSourceLanguage(languages.getOrDefault(userInput,null));
+                    if(parameters.getSourceLanguage() == null){
                         System.out.println("Source Language was not found. Either the language is not supported or the input contains a misspelling");
                     }
                 }
-                while(parameters.getLngTarget() == null){
+                while(parameters.getTargetLanguage() == null){
                     System.out.println("Enter Target Language: ");
                     userInput = scanner.nextLine().toLowerCase();
-                    parameters.setLngTarget(languages.getOrDefault(userInput,null));
-                    if(parameters.getLngTarget() == null){
+                    parameters.setTargetLanguage(languages.getOrDefault(userInput,null));
+                    if(parameters.getTargetLanguage() == null){
                         System.out.println("Target Language was not found. Either the language is not supported or the input contains a misspelling");
                     }
                 }
@@ -101,17 +124,17 @@ public class Dialogue {
                 """;
     }
 
-    public void dialogue(Parameters parameters){
+    private void dialogue(Parameters parameters){
         urlDialog(parameters);
         depthDialog(parameters);
         languageDialog(parameters);
         System.out.println("URL: "+parameters.getUrl()+", Depth: "+parameters.getDepth());
-        if(parameters.getLngSource() != null && parameters.getLngTarget() != null){
-            System.out.println("Source Language: "+parameters.getLngSource()+", Target Language: "+parameters.getLngTarget());
+        if(parameters.getSourceLanguage() != null && parameters.getTargetLanguage() != null){
+            System.out.println("Source Language: "+parameters.getSourceLanguage()+", Target Language: "+parameters.getTargetLanguage());
         }
     }
 
-    public int multithreadingDialogueSetNumber(){
+    private int multithreadingDialogueSetNumber(){
 
         String userInput;
         System.out.println("Enter number of crawlers you want to run (1 by default):");
@@ -132,20 +155,5 @@ public class Dialogue {
         return 1;
     }
 
-    public List<CrawlerRecordFactory> multithreadingDialogue(){
-        System.out.println(getCard());
-        List<CrawlerRecordFactory> factories = new ArrayList<>();
 
-        int threads = multithreadingDialogueSetNumber();
-        for(int i = 0; i < threads; i++){
-            Parameters parameters = new Parameters();
-            System.out.println("Setting up thread number "+(i+1));
-            dialogue(parameters);
-            parametersList.add(parameters);
-            CrawlerRecordFactory factory = new CrawlerRecordFactory(parameters.getUrl(),parameters.getDepth());
-            factories.add(factory);
-        }
-        scanner.close();
-        return factories;
-    }
 }

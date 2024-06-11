@@ -7,6 +7,7 @@ import org.cleanCode.Translation.TranslatorApi;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -14,6 +15,8 @@ public class MarkdownFileCreator {
     private final List<Parameters> parametersList;
     private final List<CrawlerRecord> crawlerRecordList;
     private TranslatorApi translatorApi;
+    private FileWriter fileWriter;
+    private PrintWriter printWriter;
 
     public void setTranslatorApi(TranslatorApi translatorApi) {
         this.translatorApi = translatorApi;
@@ -26,91 +29,102 @@ public class MarkdownFileCreator {
     }
 
 
-    public  void createMdFile(){
+    public  void createMdFile() throws IOException {
+        if(parametersList.isEmpty()){
+            throw new IllegalArgumentException("List of parameters is empty");
+        }
         if(crawlerRecordList == null || crawlerRecordList.isEmpty()){
-            throw new NullPointerException();
+            throw new IllegalArgumentException("MarkdownFileCreator.createMdFile: crawlerRecordList is null or empty");
         }
         try{
             String fileName = "summary.md";
-            FileWriter fileWriter = new FileWriter(fileName);
-            PrintWriter printWriter = new PrintWriter(fileWriter);
+            fileWriter = new FileWriter(fileName);
+            printWriter = new PrintWriter(fileWriter);
             for(int i = 0; i<crawlerRecordList.size(); i++){
-                buildSummaryHead(fileWriter,parametersList.get(i));
-                buildSummaryBody(fileWriter,parametersList.get(i),crawlerRecordList.get(i));
+                buildSummaryHead(parametersList.get(i));
+                buildSummaryBody(parametersList.get(i),crawlerRecordList.get(i));
             }
             printWriter.close();
             fileWriter.close();
         }catch (IOException e){
-            System.err.println(e.getMessage());
+            throw new IOException("MarkdownFileCreator.createMdFile: IOException "+e.getMessage());
         }
     }
 
 
-    private void buildSummaryHead(FileWriter writer, Parameters parameters) {
+    private void buildSummaryHead(Parameters parameters) throws IOException {
         try{
-            writer.write("input: <a>"+parameters.getUrl()+"<a>\n");
-            writer.write("<br>depth: "+parameters.getDepth()+"\n");
-            if(parameters.getLngSource() != null && parameters.getLngTarget() != null) {
-                writer.write("<br>source language: "+ parameters.getLngSource() +"\n");
-                writer.write("<br>target language: "+ parameters.getLngTarget() +"\n");
+            fileWriter.write("input: <a>"+parameters.getUrl()+"<a>\n");
+            fileWriter.write("<br>depth: "+parameters.getDepth()+"\n");
+            if(parameters.getSourceLanguage() != null && parameters.getTargetLanguage() != null) {
+                fileWriter.write("<br>source language: "+ parameters.getSourceLanguage() +"\n");
+                fileWriter.write("<br>target language: "+ parameters.getTargetLanguage() +"\n");
             }
-            writer.write("<br>summary:\n");
-            writer.flush();
+            fileWriter.write("<br>summary:\n");
+            fileWriter.flush();
         }catch (IOException e){
-            throw new RuntimeException("MarkdownFileCreator.buildSummaryHead: IOException "+e.getMessage());
+            throw new IOException("MarkdownFileCreator.buildSummaryHead: IOException "+e.getMessage());
         }
     }
 
-    private void buildSummaryBody(FileWriter writer, Parameters parameters, CrawlerRecord record) {
+    private void buildSummaryBody(Parameters parameters, CrawlerRecord record) throws IOException {
         try{
             List<Heading> headings = record.getHeadings();
-            writeHeadings(writer, headings, parameters);
+            writeHeadings(headings, parameters);
 
-            writer.write("\n");
-            writer.flush();
+            fileWriter.write("\n");
+            fileWriter.flush();
 
             for(int i = 1; i < parameters.getDepth();i++)
                 for(CrawlerRecord recordLayer : record.getSubSites()) {
                     if(!recordLayer.isBroken()) {
                         String text = Formatting.createUrlWithArrowString(i,recordLayer.getURL(),false);
-                        writer.write(text);
+                        fileWriter.write(text);
                         headings = recordLayer.getHeadings();
 
                         if (headings != null) {
                             for (Heading heading : headings) {
-                                writer.write(Formatting.headerTypeToHashtags(heading) + " " + heading.getHeading()+"\n");
+                                fileWriter.write(Formatting.headerTypeToHashtags(heading) + " " + heading.getHeading()+"\n");
                             }
                         }
 
                     } else{
                         String text = Formatting.createUrlWithArrowString(i,recordLayer.getURL(),true);
-                        writer.write(text);
+                        fileWriter.write(text);
                     }
-                    writer.write("\n");
-                    writer.flush();
+                    fileWriter.write("\n");
+                    fileWriter.flush();
                 }
         } catch (IOException e){
-           throw new RuntimeException("MarkdownFileCreator.buildSummaryBody: IOException"+e.getMessage());
+           throw new IOException("MarkdownFileCreator.buildSummaryBody: IOException"+e.getMessage());
         }
     }
 
-    private void writeHeadings(FileWriter writer, List<Heading> headings, Parameters parameters) {
+    private void writeHeadings(List<Heading> headings, Parameters parameters) throws IOException {
         try {
             for (Heading heading : headings) {
-                writer.write(Formatting.headerTypeToHashtags(heading) + " " + parseHeaderHTML(heading.getHeading(), parameters));
-                writer.write("\n");
+                fileWriter.write(Formatting.headerTypeToHashtags(heading) + " " + parseHeaderHTML(heading.getHeading(), parameters));
+                fileWriter.write("\n");
             }
         }catch (IOException e){
-            throw new RuntimeException("MarkdownFileCreator.writeHeadings: IOException"+e.getMessage());
+            throw new IOException("MarkdownFileCreator.writeHeadings: IOException "+e.getMessage());
+        }catch (InterruptedException e){
+            throw new InterruptedIOException("MarkdownFileCreator.writeHeadings: InterruptedException "+e.getMessage());
         }
     }
 
-    private String parseHeaderHTML(String html, Parameters parameters){
+    private String parseHeaderHTML(String html, Parameters parameters) throws IOException, InterruptedException{
         HtmlParser jsoupHtmlParser = new JsoupHtmlParser();
         String text = jsoupHtmlParser.parse(html);
 
-        if(parameters.getLngSource() != null && parameters.getLngTarget() != null) {
-            return translatorApi.getTranslatedText(parameters.getLngSource(), parameters.getLngTarget(), text);
+        if(parameters.getSourceLanguage() != null && parameters.getTargetLanguage() != null) {
+            try {
+                return translatorApi.getTranslatedText(parameters.getSourceLanguage(), parameters.getTargetLanguage(), text);
+            }catch (IOException e){
+                throw new IOException("MarkdownFileCreator.parseHeaderHTML: IOException "+e.getMessage());
+            }catch (InterruptedException e){
+                throw new InterruptedException("MarkdownFileCreator.parseHeaderHTML: InterruptedException "+e.getMessage());
+            }
         }
         return text;
     }

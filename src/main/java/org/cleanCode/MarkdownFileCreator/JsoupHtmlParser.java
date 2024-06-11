@@ -8,6 +8,9 @@ public class JsoupHtmlParser implements HtmlParser {
 
     @Override
     public String parse(String html) {
+        if (html == null || html.isEmpty()) {
+            throw new IllegalArgumentException("html is null or empty");
+        }
         Document doc = Jsoup.parse(html);
         Element element = doc.firstElementChild();
         if(element == null){
