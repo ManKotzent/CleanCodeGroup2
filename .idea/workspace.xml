@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Added Threading Functionality to CrawlerRecordFactory">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Fixed Url Extraction in HTMLExtractor &#10;Changed CrawlerRecordFactory to implement deep multithreading for faster performance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/CrawlerRecord/CrawlerRecordFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/URLHandler/UrlHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/URLHandler/UrlHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CrawlerRecordFactoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +101,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -116,20 +117,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.generateCrawlerRecordTest.multithreadingTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cleanCode.Main" />
-      <module name="CleanCodeGroup2.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cleanCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.generateCrawlerRecordTest.test">
     <configuration name="AllTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -144,6 +132,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;AllTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CrawlerRecordFactoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CrawlerRecordFactoryTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,7 +234,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.CrawlerRecordFactoryTest" />
       <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
       <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
       <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
@@ -231,11 +242,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.generateCrawlerRecordTest.test" />
-        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
         <item itemvalue="Gradle.AllTests" />
+        <item itemvalue="Gradle.CrawlerRecordFactoryTest" />
+        <item itemvalue="Gradle.generateCrawlerRecordTest.multithreadingTest" />
+        <item itemvalue="Gradle.generateCrawlerRecordTest.complexTest3" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +317,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713875477980</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Threading Functionality to CrawlerRecordFactory">
+      <created>1717798621551</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717798621551</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed Url Extraction in HTMLExtractor &#10;Changed CrawlerRecordFactory to implement deep multithreading for faster performance">
+      <created>1717875759076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717875759076</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +370,7 @@
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
     <MESSAGE value="Added Threading Functionality to CrawlerRecordFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Threading Functionality to CrawlerRecordFactory" />
+    <MESSAGE value="Fixed Url Extraction in HTMLExtractor &#10;Changed CrawlerRecordFactory to implement deep multithreading for faster performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Url Extraction in HTMLExtractor &#10;Changed CrawlerRecordFactory to implement deep multithreading for faster performance" />
   </component>
 </project>

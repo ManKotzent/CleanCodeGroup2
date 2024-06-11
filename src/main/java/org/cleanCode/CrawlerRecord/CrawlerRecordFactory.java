@@ -3,6 +3,7 @@ package org.cleanCode.CrawlerRecord;
 import org.cleanCode.HTML.HTMLExtractor;
 import org.cleanCode.HTML.HTMLFetcher;
 import org.cleanCode.Heading.Heading;
+import org.cleanCode.URLHandler.UrlHandler;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -35,6 +36,12 @@ public class CrawlerRecordFactory extends Thread {
     }
 
     public void generateCrawlerRecord () {
+        if(UrlHandler.isRessourceUrl(this.url) || UrlHandler.isLargeSocialMedia(this.url)) {
+            this.record = new CrawlerRecord(url, null, null);
+            return;
+        }
+        System.out.println("Staring generateCrawlerRecord with " + url + " and depth " + depth);
+
         CrawlerRecord crawlerRecord;
 
         try {
@@ -77,5 +84,41 @@ public class CrawlerRecordFactory extends Thread {
         }
 
         this.record = crawlerRecord;
+    }
+
+    @Deprecated
+    public static CrawlerRecord generateCrawlerRecord (String url, int depth) {
+        System.out.println("Staring generateCrawlerRecord with " + url + " and depth " + depth);
+
+        CrawlerRecord crawlerRecord;
+
+        try {
+            String html = HTMLFetcher.fetchHtmlFromUrl(url);
+
+            //If the maximum depth is reached, create a simple record
+            if(depth == 0) {
+                crawlerRecord = new CrawlerRecord(url, false);
+
+                //If the maximum depth isn't reached, go deeper recursively
+            } else {
+                HTMLExtractor htmlExtractor = new HTMLExtractor(html);
+                List<Heading> headings = htmlExtractor.getHeadings();
+                List<String> urls = htmlExtractor.getUrls();
+                List<CrawlerRecord> subSites = new LinkedList<>();
+
+                for(String url_ : urls) {
+                    if(UrlHandler.isRessourceUrl(url_) || UrlHandler.isLargeSocialMedia(url_)) subSites.add(new CrawlerRecord(url_, null, null));
+                    else subSites.add(generateCrawlerRecord(url_, depth - 1));
+                }
+
+                crawlerRecord = new CrawlerRecord(url, headings, subSites);
+            }
+
+        } catch (IOException e) {
+            //If the url is broken, create a simple record
+            crawlerRecord = new CrawlerRecord(url, true);
+        }
+
+        return crawlerRecord;
     }
 }
