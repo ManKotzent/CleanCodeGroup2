@@ -40,7 +40,6 @@ public class CrawlerRecordFactory extends Thread {
             this.record = new CrawlerRecord(url, null, null);
             return;
         }
-        System.out.println("Staring generateCrawlerRecord with " + url + " and depth " + depth);
 
         CrawlerRecord crawlerRecord;
 
@@ -88,8 +87,6 @@ public class CrawlerRecordFactory extends Thread {
 
     @Deprecated
     public static CrawlerRecord generateCrawlerRecord (String url, int depth) {
-        System.out.println("Staring generateCrawlerRecord with " + url + " and depth " + depth);
-
         CrawlerRecord crawlerRecord;
 
         try {
