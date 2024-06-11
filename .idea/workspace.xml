@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator">
+    <list default="true" id="991a52c6-b3b0-4d8d-b223-0d9ee51b0847" name="Changes" comment="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JacksonJsonParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/JsonParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Dialogue/Dialogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/Formatting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Parameters/Parameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/AllTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/FormattingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/FormattingTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownAllTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreatorTests/MarkdownFileCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cleanCode/MarkdownFileCreator/MarkdownFileCreatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cleanCode/Translation/TranslatorApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,7 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -274,7 +271,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713270728175</updated>
       <workItem from="1713983334478" duration="2010000" />
-      <workItem from="1718061654125" duration="15124000" />
+      <workItem from="1718061654125" duration="18408000" />
     </task>
     <task id="LOCAL-00001" summary="Created base project">
       <created>1713272276928</created>
@@ -333,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718069166813</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name">
+      <option name="closed" value="true" />
+      <created>1718102482030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718102482030</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +377,8 @@
     <MESSAGE value="Added new test CrawlerRecordFactoryTest" />
     <MESSAGE value="Created basis for Main.main" />
     <MESSAGE value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored test directory to fit gradle.&#10;Refactored MarkdownFileCreator/MarkdownFileCreatorTest&#10;Decoupled Jsoup from MarkdownFileCreator&#10;Decoupled Formatting from MarkdownFileCreator" />
+    <MESSAGE value="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Dialogue,Main, and MarkdownFileCreator to support multithreading&#10;Changed test MarkdownFileCreator directory name to match package name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

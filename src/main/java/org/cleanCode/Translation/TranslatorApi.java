@@ -1,10 +1,5 @@
 package org.cleanCode.Translation;
 
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -17,14 +12,16 @@ public class TranslatorApi {
 
 
     private HttpClient client;
-    private final Map<String,String> languages = new HashMap<>();
+    private Map<String,String> languages = new HashMap<>();
     private final String getLanguagesUri = "https://text-translator2.p.rapidapi.com/getLanguages";
     private final String translateUri = "https://text-translator2.p.rapidapi.com/translate";
     private final String apiKeyValue = "e458a15ad4msh50589e69c120eebp14b794jsn195a6ee58120";
     private final String apiHostValue ="text-translator2.p.rapidapi.com";
+    private final JsonParser jsonParser;
 
     public TranslatorApi(){
         this.client = HttpClient.newHttpClient();
+        this.jsonParser = new JacksonJsonParser();
     }
 
     public void setClient(HttpClient client){
@@ -54,30 +51,16 @@ public class TranslatorApi {
     }
 
     public Map<String,String> getLanguages(){
-        ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = sendGetLanguagesCall();
-            JsonNode jsonNode = objectMapper.readTree(json);
-            JsonNode languagesNode = jsonNode.get("data").get("languages");
-            for(int i = 0; i<languagesNode.size();i++){
-                String code = languagesNode.get(i).get("code").asText();
-                String name = languagesNode.get(i).get("name").asText().toLowerCase();
-                languages.put(name,code);
-            }
+
+            languages = jsonParser.jsonGetAllLanguages(json);
+
             return languages;
-        }catch(JsonProcessingException e){
-            throw new RuntimeException("Error getting languages", e);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-
-    public void printLanguages(){
-        for(Map.Entry<String,String> entry : languages.entrySet()){
-            System.out.println(entry.getKey() + " -> "+entry.getValue());
-        }
-    }
-
 
     public String sendTranslateCall(String sourceLng, String targetLng, String text) throws IOException, InterruptedException {
         if(sourceLng == null || targetLng == null || text == null){
@@ -114,13 +97,10 @@ public class TranslatorApi {
 
 
     public String getTranslatedText(String lngSource, String lngTarget, String text){
-
-        ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = sendTranslateCall(lngSource,lngTarget,text);
-            JsonNode jsonNode = objectMapper.readTree(json);
-            JsonNode translatedText = jsonNode.get("data").get("translatedText");
-            return translatedText.asText();
+
+            return jsonParser.getTranslatedText(json);
         } catch(NullPointerException | IOException | InterruptedException e){
             throw new RuntimeException(e);
         }

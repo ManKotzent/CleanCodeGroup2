@@ -109,7 +109,6 @@ public class Dialogue {
         if(parameters.getLngSource() != null && parameters.getLngTarget() != null){
             System.out.println("Source Language: "+parameters.getLngSource()+", Target Language: "+parameters.getLngTarget());
         }
-        System.out.println("Your request is processing. Please wait...");
     }
 
     public int multithreadingDialogueSetNumber(){

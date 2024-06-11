@@ -24,7 +24,7 @@ public class Main {
         Dialogue dialogue = new Dialogue(parametersList, languages);
 
         crawlerRecordFactories = dialogue.multithreadingDialogue();
-
+        System.out.println("Your request is processing. Please wait...");
         for (CrawlerRecordFactory crawlerRecordFactory : crawlerRecordFactories) {
             crawlerRecordFactory.start();
         }
